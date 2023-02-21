@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Lambda (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Lambda (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
