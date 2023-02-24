@@ -10,14 +10,14 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>aaaf1461-c12f-4c11-9d94-706f6d46a5ee</PackageIdentityName>
     <PackageIdentityPublisher>CN=mannu</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\mannu\source\Lambda\Lambda\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\mannu\source\repos\Lambda\Lambda\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppX</LayoutDir>
+    <LayoutDir>C:\Users\mannu\source\repos\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppX</LayoutDir>
     <RegisteredManifestChecksum>64BFCE113D00E2C7AF0FC4D11A85482D20ADB0EF90297AF98AC5C6AE358677B5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>aaaf1461-c12f-4c11-9d94-706f6d46a5ee_1.0.0.0_x86__j22vevzxvka9r</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>aaaf1461-c12f-4c11-9d94-706f6d46a5ee_j22vevzxvka9r!App</RegisteredUserModeAppID>
@@ -26,32 +26,32 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\mannu\source\repos\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-02-21T15:47:05.395</Modified>
+      <Modified>2023-02-24T13:35:21.856</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-02-21T15:47:04.680</Modified>
+      <Modified>2023-02-21T15:23:24.455</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.runtimeconfig.json">
       <PackagePath>Lambda.runtimeconfig.json</PackagePath>
-      <Modified>2023-02-21T15:47:04.195</Modified>
+      <Modified>2023-02-21T15:23:22.742</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.dll">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.dll">
       <PackagePath>Lambda.dll</PackagePath>
-      <Modified>2023-02-21T15:47:02.723</Modified>
+      <Modified>2023-02-24T13:35:21.397</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>Lambda.exe</PackagePath>
-      <Modified>2023-02-21T15:47:02.782</Modified>
+      <Modified>2023-02-24T13:35:21.423</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.deps.json">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.deps.json">
       <PackagePath>Lambda.deps.json</PackagePath>
-      <Modified>2023-02-21T15:47:03.859</Modified>
+      <Modified>2023-02-21T15:23:22.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.14\runtimes\win-x86\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1013,31 +1013,31 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-11-08T19:31:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2023-02-21T15:20:25.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <Modified>2023-02-21T15:20:25.166</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <Modified>2023-02-21T15:20:25.166</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <Modified>2023-02-21T15:20:25.166</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <Modified>2023-02-21T15:20:25.167</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <Modified>2023-02-21T15:20:25.168</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mannu\source\repos\Lambda\Lambda\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <Modified>2023-02-21T15:20:25.168</Modified>
     </AppxPackagedFile>
