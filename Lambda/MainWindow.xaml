@@ -1,6 +1,3 @@
-<!-- Copyright (c) Microsoft Corporation and Contributors. -->
-<!-- Licensed under the MIT License. -->
-
 <Window
     x:Class="Lambda.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -10,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
+    <StackPanel Padding="12" BorderBrush="Azure" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="advButton_Click">Click to send file sample</Button>
+        <TextBlock x:Name="advblock"/>
+        <ProgressBar Width="130" IsIndeterminate="True" ShowPaused="False" ShowError="False" Margin="12,12" />
+  
     </StackPanel>
 </Window>
