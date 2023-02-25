@@ -8,9 +8,9 @@
     mc:Ignorable="d">
 
     <StackPanel Padding="12" BorderBrush="Azure" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="advButton_Click">Click to send file sample</Button>
+        
         <TextBlock x:Name="advblock"/>
-        <ProgressBar Width="130" IsIndeterminate="True" ShowPaused="False" ShowError="False" Margin="12,12" />
-  
+        <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="130" IsIndeterminate="True" ShowPaused="False" ShowError="False" Margin="12,12" />
+        <Button x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="advButton_Click">Click to send file sample</Button>
     </StackPanel>
 </Window>
