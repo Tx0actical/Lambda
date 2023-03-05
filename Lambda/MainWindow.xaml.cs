@@ -23,29 +23,28 @@ namespace Lambda {
 
     public sealed partial class MainWindow : Window {
         private static int _clicks = 0;
-        // public bool _response = false;
+        public bool _response = false;
 
         public MainWindow () {
             this.InitializeComponent ();
         }
-        private void advButton_Click (object sender, RoutedEventArgs e) {
+        private void AdvButton_Click (object sender, RoutedEventArgs e) {
             advblock.Text = "Sample Sent. Awaiting response...";
             AdvancedButton.Visibility = Visibility.Collapsed;
             _clicks++;
             if (_clicks == 1)
                 advprogressbar.Visibility = Visibility.Visible;
-            //if (_response)
-            //    advprogressbar.IsIndeterminate = false;
+            if (_response) {
+                advprogressbar.IsIndeterminate = false;
+            }
+                
         }
         private void ContentFrame_NavigationFailed (object sender, NavigationFailedEventArgs e) {
             throw new Exception ("Failed to load Page " + e.SourcePageType.FullName);
         }
         
         private void NavView_ItemInvoked (NavigationView sender, NavigationViewItemInvokedEventArgs e) {
-            NavView.MenuItems.Add (new NavigationViewItem {
-                Content = "Advanced Scanning",
-                Tag = "FileScanningPage"
-            });
+            
         }
         private void NavView_Loaded (object sender, RoutedEventArgs e) {
 
