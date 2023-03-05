@@ -28,17 +28,22 @@ namespace Lambda {
         public MainWindow () {
             this.InitializeComponent ();
         }
+
         private void AdvButton_Click (object sender, RoutedEventArgs e) {
             advblock.Text = "Sample Sent. Awaiting response...";
             AdvancedButton.Visibility = Visibility.Collapsed;
             _clicks++;
-            if (_clicks == 1)
+            if (_clicks == 1) {
+                advblock.Text = "Error Receiveing Response";
                 advprogressbar.Visibility = Visibility.Visible;
-            if (_response) {
-                advprogressbar.IsIndeterminate = false;
             }
                 
+
+            if (_response) {
+                
+            }
         }
+
         private void ContentFrame_NavigationFailed (object sender, NavigationFailedEventArgs e) {
             throw new Exception ("Failed to load Page " + e.SourcePageType.FullName);
         }
@@ -46,6 +51,7 @@ namespace Lambda {
         private void NavView_ItemInvoked (NavigationView sender, NavigationViewItemInvokedEventArgs e) {
             
         }
+
         private void NavView_Loaded (object sender, RoutedEventArgs e) {
 
         }

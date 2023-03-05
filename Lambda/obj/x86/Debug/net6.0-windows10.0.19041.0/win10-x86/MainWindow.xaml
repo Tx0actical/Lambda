@@ -36,6 +36,7 @@
         </SplitView.Pane>
         <SplitView.Content>
             <StackPanel x:ConnectionId='4' x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
+                
                 <Button x:ConnectionId='5'  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}"                         HorizontalAlignment="Center" Height="44">Click to send file sample</Button>
                 <TextBlock x:ConnectionId='6' x:Name="advblock" HorizontalAlignment="Center" Height="44"/>
                 <ProgressBar x:ConnectionId='7' x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44"/>
