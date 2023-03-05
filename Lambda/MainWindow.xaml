@@ -30,16 +30,19 @@
                     <NavigationViewItem Content="Account" Tag="AccountInformationPage" />
                     <NavigationViewItem Content="Help" Tag="HelpPage" />
                 </NavigationView.FooterMenuItems>
-                <Frame x:Name="contentFrame9" />
+                
             </NavigationView>
 
         </SplitView.Pane>
-        <StackPanel Orientation="Vertical" Margin="50,50">
-            <TextBlock x:Name="advblock"/>
-            <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="130" IsIndeterminate="True" ShowPaused="False" ShowError="False" />
-            <Button  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="advButton_Click">Click to send file sample</Button>
-        </StackPanel>
+        <SplitView.Content>
+            <StackPanel x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
+                <Button  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="AdvButton_Click" HorizontalAlignment="Center" Height="44">Click to send file sample</Button>
+                <TextBlock x:Name="advblock" HorizontalAlignment="Center" Height="44"/>
+                <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44"/>
+            </StackPanel>
 
+        </SplitView.Content>
+        
     </SplitView>
 
    
