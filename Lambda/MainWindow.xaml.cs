@@ -34,7 +34,7 @@ namespace Lambda {
             AdvancedButton.Visibility = Visibility.Collapsed;
             _clicks++;
             if (_clicks == 1) {
-                advblock.Text = "Error Receiveing Response";
+                advblock.Text = "Error Receiving Response";
                 advprogressbar.Visibility = Visibility.Visible;
             }
         }

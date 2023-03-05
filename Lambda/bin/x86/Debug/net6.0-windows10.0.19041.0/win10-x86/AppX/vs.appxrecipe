@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-03-05T06:53:54.207</Modified>
+      <Modified>2023-03-05T07:06:44.321</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.dll">
       <PackagePath>Lambda.dll</PackagePath>
-      <Modified>2023-03-05T06:53:53.700</Modified>
+      <Modified>2023-03-05T07:06:43.991</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>Lambda.exe</PackagePath>
-      <Modified>2023-03-05T06:53:53.722</Modified>
+      <Modified>2023-03-05T07:06:44.003</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.deps.json">
       <PackagePath>Lambda.deps.json</PackagePath>
