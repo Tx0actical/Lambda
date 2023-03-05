@@ -37,11 +37,6 @@ namespace Lambda {
                 advblock.Text = "Error Receiveing Response";
                 advprogressbar.Visibility = Visibility.Visible;
             }
-                
-
-            if (_response) {
-                
-            }
         }
 
         private void ContentFrame_NavigationFailed (object sender, NavigationFailedEventArgs e) {
