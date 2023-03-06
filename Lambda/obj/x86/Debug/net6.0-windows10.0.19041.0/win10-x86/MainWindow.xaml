@@ -36,18 +36,17 @@
         </SplitView.Pane>
         <SplitView.Content>
             <StackPanel x:ConnectionId='4' x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
-                
-                <Button x:ConnectionId='5'  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}"                         HorizontalAlignment="Center" Height="44">Click to send file sample</Button>
-                <TextBlock x:ConnectionId='6' x:Name="advblock" HorizontalAlignment="Center" Height="44"/>
-                <ProgressBar x:ConnectionId='7' x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44"/>
+                <Button x:ConnectionId='5' x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Content="Open a file" Height="44"                               HorizontalAlignment="Center"/>
+                <TextBlock x:ConnectionId='6' x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
+
+                <Button x:ConnectionId='7'  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}"                         HorizontalAlignment="Center" Height="44">Click to send file sample</Button>
+                <TextBlock x:ConnectionId='8' x:Name="advblock" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44"/>
+                <ProgressBar x:ConnectionId='9' x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
             </StackPanel>
 
         </SplitView.Content>
         
     </SplitView>
-
-   
-    
 
 </Window>
 
