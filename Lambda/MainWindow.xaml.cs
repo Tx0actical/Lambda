@@ -5,6 +5,12 @@ using Microsoft.UI.Xaml.Navigation;
 using System;
 using Windows.Storage.Pickers;
 using static System.Net.WebRequestMethods;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using WinRT;
+using System.Net;
+using System.Threading.Tasks;
+using RestSharp;
 
 
 namespace Lambda {
@@ -42,32 +48,24 @@ namespace Lambda {
         }
 
         private async void PickAFileButton_Click (object sender, RoutedEventArgs e) {
-            // Clear previous returned file name, if it exists, between iterations of this scenario
-            PickAFileOutputTextBlock.Text = "";
 
-            // Create a file picker
+            PickAFileOutputTextBlock.Text = "";
             var openPicker = new Windows.Storage.Pickers.FileOpenPicker();
 
-            // Retrieve the window handle (HWND) of the current WinUI 3 window.
             IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
             WindowId myWndId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
 
-
-            // Initialize the file picker with the window handle (HWND).
             WinRT.Interop.InitializeWithWindow.Initialize (openPicker, hWnd);
 
-            // Set options for your file picker
             openPicker.ViewMode = PickerViewMode.Thumbnail;
             openPicker.FileTypeFilter.Add ("*");
 
-            // Open the picker for the user to pick a file
             var file = await openPicker.PickSingleFileAsync();
             if (file != null) {
                 PickAFileOutputTextBlock.Text = "Selected File : " + file.Name;
             } else {
                 PickAFileOutputTextBlock.Text = "Operation cancelled";
             }
-
         }
     }
 }

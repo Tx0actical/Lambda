@@ -51,6 +51,10 @@
             "Microsoft.WindowsAppSDK": {
               "target": "Package",
               "version": "[1.2.221109.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             }
           },
           "imports": [
