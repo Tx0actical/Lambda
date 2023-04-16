@@ -1,23 +1,15 @@
 using Microsoft.UI;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Navigation;
 using System;
 using Windows.Storage.Pickers;
-using static System.Net.WebRequestMethods;
-using System.Net.Http.Headers;
-using System.Net.Http;
-using WinRT;
-using System.Net;
-using System.Threading.Tasks;
-using RestSharp;
-
 
 namespace Lambda {
 
     public sealed partial class MainWindow : Window {
         private static int _clicks = 0;
-        public int _success_response_status_code = 200;
+        public static bool CameFromToggle = false;
+        public static bool CameFromGridChange = false;
 
         public MainWindow () {
             this.InitializeComponent ();
@@ -32,18 +24,6 @@ namespace Lambda {
                 advprogressbar.Visibility = Visibility.Visible;
             }
             AdvancedButton = (Button) sender;
-
-        }
-
-        private void ContentFrame_NavigationFailed (object sender, NavigationFailedEventArgs e) {
-            throw new Exception ("Failed to load Page " + e.SourcePageType.FullName);
-        }
-
-        private void NavView_ItemInvoked (NavigationView sender, NavigationViewItemInvokedEventArgs e) {
-
-        }
-
-        private void NavView_Loaded (object sender, RoutedEventArgs e) {
 
         }
 
@@ -66,6 +46,35 @@ namespace Lambda {
             } else {
                 PickAFileOutputTextBlock.Text = "Operation cancelled";
             }
+        }
+
+        private void NavView_ItemInvoked (NavigationView sender, NavigationViewItemInvokedEventArgs args) {
+
+        }
+
+        private void NavigationView_SelectionChanged (NavigationView sender, NavigationViewSelectionChangedEventArgs args) {
+                var SelectedItem = (NavigationViewItem) args.SelectedItem;
+                string SelectedItemTag = (string) SelectedItem.Tag;
+                switch (SelectedItemTag) {
+                    case "Advanced Scanning":
+                        ContentFrame.Navigate (typeof (AdvancedScanningPage));
+                        break;
+                    case "Scan History":
+                        ContentFrame.Navigate (typeof (ScanHistoryPage));
+                        break;
+                    case "Results":
+                        ContentFrame.Navigate (typeof (ResultsPage));
+                        break;
+                    case "Settings":
+                        ContentFrame.Navigate (typeof (SettingsPage));
+                        break;
+                    case "About":
+                        ContentFrame.Navigate (typeof (AboutPage));
+                        break;
+                    case "Account":
+                        ContentFrame.Navigate (typeof (AccountPage));
+                        break;
+                }
         }
     }
 }
