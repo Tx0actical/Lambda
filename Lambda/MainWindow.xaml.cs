@@ -13,6 +13,8 @@ namespace Lambda {
 
         public MainWindow () {
             this.InitializeComponent ();
+            ExtendsContentIntoTitleBar = true;
+            SetTitleBar (AppTitleBar);
         }
 
         private void AdvButton_Click (object sender, RoutedEventArgs e) {
