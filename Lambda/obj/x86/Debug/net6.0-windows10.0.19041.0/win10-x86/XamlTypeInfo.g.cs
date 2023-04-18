@@ -224,7 +224,7 @@ namespace Lambda.Lambda_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[36];
+            _typeNameTable = new string[37];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -261,8 +261,9 @@ namespace Lambda.Lambda_XamlTypeInfo
             _typeNameTable[33] = "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings";
             _typeNameTable[34] = "Lambda.MainWindow";
             _typeNameTable[35] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.XamlRoot";
 
-            _typeTable = new global::System.Type[36];
+            _typeTable = new global::System.Type[37];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -299,6 +300,7 @@ namespace Lambda.Lambda_XamlTypeInfo
             _typeTable[33] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings);
             _typeTable[34] = typeof(global::Lambda.MainWindow);
             _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.XamlRoot);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -603,11 +605,16 @@ namespace Lambda.Lambda_XamlTypeInfo
             case 34:   //  Lambda.MainWindow
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
                 userType.Activator = Activate_34_MainWindow;
+                userType.AddMemberName("XamlRoot");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 35:   //  Microsoft.UI.Xaml.Window
+                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 36:   //  Microsoft.UI.Xaml.XamlRoot
                 xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -1149,6 +1156,11 @@ namespace Lambda.Lambda_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             return that.TemplateSettings;
         }
+        private object get_52_MainWindow_XamlRoot(object instance)
+        {
+            var that = (global::Lambda.MainWindow)instance;
+            return that.XamlRoot;
+        }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -1518,6 +1530,12 @@ namespace Lambda.Lambda_XamlTypeInfo
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings");
                 xamlMember.Getter = get_51_ProgressBar_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Lambda.MainWindow.XamlRoot":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Lambda.MainWindow");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "XamlRoot", "Microsoft.UI.Xaml.XamlRoot");
+                xamlMember.Getter = get_52_MainWindow_XamlRoot;
                 xamlMember.SetIsReadOnly();
                 break;
             }
