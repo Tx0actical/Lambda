@@ -11,6 +11,47 @@
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="AboutPage.xaml" />
+    <None Remove="AccountPage.xaml" />
+    <None Remove="AdvancedScanningPage.xaml" />
+    <None Remove="HomePage.xaml" />
+    <None Remove="ResultsPage.xaml" />
+    <None Remove="ScanHistoryPage.xaml" />
+    <None Remove="SettingsPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Remove="AboutPage.xaml" />
+    <Page Remove="AccountPage.xaml" />
+    <Page Remove="AdvancedScanningPage.xaml" />
+    <Page Remove="HomePage.xaml" />
+    <Page Remove="ResultsPage.xaml" />
+    <Page Remove="ScanHistoryPage.xaml" />
+    <Page Remove="SettingsPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="AccountPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="AdvancedScanningPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="ResultsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="ScanHistoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
