@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource WindowCaptionButtonBackground}">
@@ -26,6 +27,7 @@
                         SelectionChanged="NavigationView_SelectionChanged"
                         ItemInvoked="NavView_ItemInvoked"
                         Loaded="NavView_Loaded"
+                        BackRequested="NavView_BackRequested"
                         Header="{Binding ElementName=headerText, Path=Text, Mode=TwoWay}"
                         PaneTitle="{Binding ElementName=paneText, Path=Text, Mode=TwoWay}"
                         PaneDisplayMode="Auto"
@@ -34,7 +36,6 @@
                         IsBackEnabled="True"
                         IsSettingsVisible="False"
                         IsBackButtonVisible="Auto"
-                        BackRequested="NavView_BackRequested"
                         Background="{ThemeResource WindowCaptionButtonBackground}"
                         Grid.Row="1"
                         AlwaysShowHeader="True"
@@ -48,16 +49,19 @@
                         <SymbolIcon Symbol="Home"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                
                 <NavigationViewItem Content="Advanced Scanning" Tag="Tag_FileScanningPage" x:Name="AdvancedScanningPage">
                     <NavigationViewItem.Icon>
                         <SymbolIcon Symbol="Scan"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                
                 <NavigationViewItem Content="Scan History" Tag="Tag_ScanHistoryPage" x:Name="ScanHistoryPage" SelectsOnInvoked="True">
                     <NavigationViewItem.Icon>
                         <SymbolIcon Symbol="Clock" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                
                 <NavigationViewItem Content="Results" Tag="Tag_ResultsPage" x:Name="ResultsPage">
                     <NavigationViewItem.Icon>
                         <SymbolIcon Symbol="Target"/>
@@ -70,41 +74,21 @@
                         <SymbolIcon Symbol="Account"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                
                 <NavigationViewItem Content="Help" Tag="Tag_HelpPage" x:Name="HelpPage">
                     <NavigationViewItem.Icon>
                         <SymbolIcon Symbol="Help"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Setings" Tag="Tag_SettingsPage" x:Name="SettingsPage">
+                
+                <NavigationViewItem Content="Settings" Tag="Tag_SettingsPage" x:Name="SettingsPage">
                     <NavigationViewItem.Icon>
                         <SymbolIcon Symbol="Setting"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
 
-            <Frame x:Name="ContentFrame">
-
-                <StackPanel x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
-                    <Button x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Content="Open a file" Height="44" Click="PickAFileButton_Click" HorizontalAlignment="Center"/>
-                    <TextBlock x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
-                    <Button  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="AdvButton_Click" HorizontalAlignment="Center" Height="44">Click to send file sample</Button>
-                    <ContentDialog x:Name="ErrorContentDialog"
-                                   PrimaryButtonText="Retry"
-                                   IsPrimaryButtonEnabled="False"
-                                   CloseButtonText="Cancel"
-                                   Opened="Error_Opened">
-                        <StackPanel x:Name="ErrorStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
-                            <TextBlock TextWrapping="WrapWholeWords">
-                                <Run>Error Receiving Response.</Run>
-                            </TextBlock>
-                        </StackPanel>
-                    </ContentDialog>
-                    <TextBlock x:Name="advblock" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44"/>
-                    <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
-                </StackPanel>
-
-            </Frame>
-
+            <Frame x:Name="ContentFrame" />
         </NavigationView>
     </Grid>
 

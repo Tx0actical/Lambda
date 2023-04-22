@@ -1,16 +1,12 @@
 using Microsoft.UI;
-using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using System;
-using System.Collections.ObjectModel;
 using Windows.Storage.Pickers;
-using WinRT;
 using System.Runtime.InteropServices; // For DllImport
 using System.Collections.Generic;
-using System.Formats.Asn1;
 using System.Linq;
 using Windows.UI.Core;
 using Windows.System;
@@ -47,10 +43,10 @@ namespace Lambda {
     }
 
     public sealed partial class MainWindow : Window {
-        private static int SuccessStatusCode = 200;
+        
         public static bool CameFromToggle = false;
         public static bool CameFromGridChange = false;
-        
+
 
         public XamlRoot XamlRoot { get; private set; }
 
@@ -73,48 +69,6 @@ namespace Lambda {
             }
         }
 
-        private void AdvButton_Click (object sender, RoutedEventArgs e) {
-
-            ContentDialog RequestSuccessDialog = new ContentDialog ();
-            ContentDialog RequestErrorDialog = new ContentDialog ();
-            // TODO: need to bind this action with sending request
-            // TODO: if request is success, display content dialoue showing the process.
-
-
-            advblock.Text = "Sample Sent. Awaiting response...";
-            AdvancedButton.Visibility = Visibility.Collapsed;
-            ContentDialog dialog = new ContentDialog ();
-
-            // TODO: else display error dialogue
-            if (SuccessStatusCode != 200) {
-                /* call error dialogue code */
-                advblock.Text = "Error Receiving Response";
-                advprogressbar.Visibility = Visibility.Visible;
-            }
-            AdvancedButton = (Button) sender;
-        }
-
-        private async void PickAFileButton_Click (object sender, RoutedEventArgs e) {
-
-            PickAFileOutputTextBlock.Text = "";
-            var openPicker = new Windows.Storage.Pickers.FileOpenPicker();
-
-            IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
-            WindowId myWndId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
-
-            WinRT.Interop.InitializeWithWindow.Initialize (openPicker, hWnd);
-
-            openPicker.ViewMode = PickerViewMode.Thumbnail;
-            openPicker.FileTypeFilter.Add ("*");
-
-            var file = await openPicker.PickSingleFileAsync();
-            if (file != null) {
-                PickAFileOutputTextBlock.Text = "Selected File : " + file.Name;
-            } else {
-                PickAFileOutputTextBlock.Text = "Operation cancelled";
-            }
-        }
-
         // Navigation Helpers
 
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)> {
@@ -133,8 +87,7 @@ namespace Lambda {
             Type _page = null;
             if (navItemTag == "Tag_SettingsPage") {
                 _page = typeof (SettingsPage);
-            }
-            else {
+            } else {
                 var item = _pages.FirstOrDefault(p => p.Tag.Equals(navItemTag));
                 _page = item.Page;
             }
@@ -142,7 +95,7 @@ namespace Lambda {
             var preNavPageType = ContentFrame.CurrentSourcePageType;
 
             // only navigate if selected page isn't currently loaded
-            if (!(_page is null) && !Type.Equals(preNavPageType, _page)) {
+            if (!(_page is null) && !Type.Equals (preNavPageType, _page)) {
                 ContentFrame.Navigate (_page, null, new DrillInNavigationTransitionInfo ());
             }
         }
@@ -157,7 +110,6 @@ namespace Lambda {
                 (NavView.DisplayMode == NavigationViewDisplayMode.Compact ||
                  NavView.DisplayMode == NavigationViewDisplayMode.Minimal))
                 return false;
-
             ContentFrame.GoBack ();
             return true;
         }
@@ -187,24 +139,75 @@ namespace Lambda {
         }
 
         public void SetCurrentNavigationViewItem (NavigationViewItem item) {
-            if (item == null) {
-                return;
+            if (item != null) {
+                string tag = item.Tag.ToString();
+                var pageItem = _pages.FirstOrDefault(p => p.Tag == tag);
+
+                if (pageItem.Page == null) {
+                    System.Diagnostics.Debug.WriteLine ($"No NavigationViewItem found for {tag}.");
+                } else {
+                    // Check if the page is already loaded
+                    if (ContentFrame.Content?.GetType () != pageItem.Page) {
+                        // Navigate to the requested page
+                        ContentFrame.Navigate (pageItem.Page, item.Content);
+                        NavView.Header = item.Content;
+                    }
+                }
+            }
+        }
+
+        public List<NavigationViewItem> GetNavigationViewItems () {
+            var result = new List<NavigationViewItem>();
+            var items = NavView.MenuItems.OfType<NavigationViewItem>().ToList();
+            items.AddRange (NavView.FooterMenuItems.OfType<NavigationViewItem>());
+            result.AddRange (items);
+
+            foreach (NavigationViewItem mainItem in items) {
+                result.AddRange (mainItem.MenuItems.OfType<NavigationViewItem>());
             }
 
-            if (item.Tag == null) {
-                return;
-            }
+            return result;
+        }
 
-            ContentFrame.Navigate (
-            Type.GetType (item.Tag.ToString ()),
-            item.Content);
-            NavView.Header = item.Content;
-            NavView.SelectedItem = item;
+        public List<NavigationViewItem> GetNavigationViewItems (Type type) {
+            return GetNavigationViewItems ().Where (i => i.Tag.ToString () == type.FullName).ToList ();
+        }
+
+        public List<NavigationViewItem> GetNavigationViewItems (Type type, string title) {
+            return GetNavigationViewItems (type).Where (ni => ni.Content.ToString () == title).ToList ();
+        }
+
+        public NavigationViewItem GetCurrentNavigationViewItem () {
+            return NavView.SelectedItem as NavigationViewItem;
+        }
+
+        public interface INavigation {
+            NavigationViewItem GetCurrentNavigationViewItem ();
+
+            List<NavigationViewItem> GetNavigationViewItems ();
+            List<NavigationViewItem> GetNavigationViewItems (Type type);
+            List<NavigationViewItem> GetNavigationViewItems (Type type, string title);
+
+            void SetCurrentNavigationViewItem (NavigationViewItem item);
         }
 
         private void NavView_Loaded (object sender, RoutedEventArgs e) {
             // Reference: https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview
-            
+            //if (ContentFrame.Content == null) {
+            //    ContentFrame.Navigate (typeof (AdvancedScanningPage), null, new DrillInNavigationTransitionInfo ());
+            //}
+
+            if (ContentFrame.Content == null) {
+                ContentFrame.Navigate (typeof (HomePage), null, new DrillInNavigationTransitionInfo ());
+            }
+
+            var items = GetNavigationViewItems(typeof(HomePage));
+            if (items.Any ()) // Check if the collection has any elements
+            {
+                SetCurrentNavigationViewItem (items.First ());
+            } else {
+                System.Diagnostics.Debug.WriteLine ("No NavigationViewItem found for HomePage.");
+            }
         }
 
         private void ContentFrame_Navigated (object sender, Microsoft.UI.Xaml.Navigation.NavigationEventArgs e) {
@@ -213,40 +216,49 @@ namespace Lambda {
 
         private void NavView_ItemInvoked (NavigationView sender, NavigationViewItemInvokedEventArgs args) {
 
-        }
+            if (args.IsSettingsInvoked) {
+                // Navigate to the settings page
+                ContentFrame.Navigate (typeof (SettingsPage));
+                NavView.Header = "Settings";
+            } else {
+                // Get the invoked menu item
+                NavigationViewItem menuItem = args.InvokedItemContainer as NavigationViewItem;
 
-        private void NavigationView_SelectionChanged (NavigationView sender, NavigationViewSelectionChangedEventArgs args) {
-            var SelectedItem = (NavigationViewItem) args.SelectedItem;
-            string SelectedItemTag = (string) SelectedItem.Tag;
-            switch (SelectedItemTag) {
-                case "Home":
-                    ContentFrame.Navigate (typeof (HomePage),               null, new DrillInNavigationTransitionInfo ());
-                    break;
-                case "Advanced Scanning":
-                    ContentFrame.Navigate (typeof (AdvancedScanningPage),   null, new DrillInNavigationTransitionInfo ());
-                    break;
-                case "Scan History":
-                    ContentFrame.Navigate (typeof (ScanHistoryPage),        null, new DrillInNavigationTransitionInfo ());
-                    break;
-                case "Results":
-                    ContentFrame.Navigate (typeof (ResultsPage),            null, new DrillInNavigationTransitionInfo ());
-                    break;
-                case "Account":
-                    ContentFrame.Navigate (typeof (AccountPage),            null, new DrillInNavigationTransitionInfo ());
-                    break;
-                case "Help":
-                    ContentFrame.Navigate (typeof (HelpPage),               null, new DrillInNavigationTransitionInfo ());
-                    break;
-                case "Settings":
-                    ContentFrame.Navigate (typeof (SettingsPage),           null, new DrillInNavigationTransitionInfo ());
-                    break;
+                if (menuItem != null) {
+                    // Get the page type from the Tag property
+                    string pageTypeName = menuItem.Tag.ToString();
+                    Type pageType = FindTypeByName(pageTypeName);
 
+                    if (pageType == null) {
+                        System.Diagnostics.Debug.WriteLine ($"Could not find type for: {pageTypeName}");
+                    } else {
+                        // Check if the page is already loaded
+                        if (ContentFrame.Content?.GetType () != pageType) {
+                            // Navigate to the requested page
+                            ContentFrame.Navigate (pageType);
+                            NavView.Header = menuItem.Content;
+                        }
+                    }
+                }
             }
         }
 
-        private async void Error_Opened (ContentDialog sender, ContentDialogOpenedEventArgs args) {
-            ContentDialogResult result = await ErrorContentDialog.ShowAsync();
-            if (result == ContentDialogResult.Primary) { /* code to retry request */ } else { /* user pressed cancel, ESC, or back arrow */}
+        // For debugging
+
+        private Type FindTypeByName (string typeName) {
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies ()) {
+                var type = assembly.GetType(typeName);
+                if (type != null) {
+                    return type;
+                }
+            }
+
+            return null;
+        }
+
+        // END: For Debugging
+        private void NavigationView_SelectionChanged (NavigationView sender, NavigationViewSelectionChangedEventArgs args) {
+            SetCurrentNavigationViewItem (args.SelectedItemContainer as NavigationViewItem);
         }
 
         public NavigationViewPaneDisplayMode ChoosePanePosition (bool toggleOn) {
@@ -260,6 +272,9 @@ namespace Lambda {
         private void NavView_BackRequested (NavigationView sender, NavigationViewBackRequestedEventArgs args) {
             TryGoBack ();
         }
+
+
+
     }
 }
 
