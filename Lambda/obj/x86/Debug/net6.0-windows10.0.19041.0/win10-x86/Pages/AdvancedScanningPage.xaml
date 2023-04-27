@@ -6,17 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource WindowCaptionButtonBackground}">
 
     <Grid>
-        <StackPanel x:ConnectionId='2' x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
-            <Button x:ConnectionId='3' x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Content="Select Object" Height="44"                                HorizontalAlignment="Center"/>
-            <TextBlock x:ConnectionId='4' x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
-            <Button x:ConnectionId='5'  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}"                         HorizontalAlignment="Center" Height="44">Scan Selected Object</Button>
-            <TextBlock x:ConnectionId='6' x:Name="advblock" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44"/>
-            
-            <ProgressBar x:ConnectionId='7' x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
+        <StackPanel x:ConnectionId='2' x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
+           
+            <Button x:ConnectionId='7' x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Content="Select Object" Height="44"                                HorizontalAlignment="Center"/>
+            <TextBlock x:ConnectionId='8' x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
+            <Button x:ConnectionId='9'  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}"                         HorizontalAlignment="Center" Height="44">Scan Selected Object</Button>
+            <ContentDialog x:ConnectionId='10' x:Name="StatusDialog" CloseButtonText="Ok" />
+            <ProgressBar x:ConnectionId='11' x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
         </StackPanel>
+
+        <Grid x:ConnectionId='3' x:Name="CustomDialogOverlay" Visibility="Collapsed">
+            <Rectangle Fill="Black" Opacity="0.5" />
+            <Grid Width="300" Height="200" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:ConnectionId='4' x:Name="CustomDialogTitle" Text="Title" FontWeight="Bold" FontSize="20" Margin="10,10,10,0" />
+                <TextBlock x:ConnectionId='5' x:Name="CustomDialogMessage" Text="Message" FontSize="16" Margin="10,40,10,0" TextWrapping="Wrap" />
+                <Button x:ConnectionId='6' x:Name="CustomDialogCloseButton" Content="OK" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom"                                       />
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
+
 

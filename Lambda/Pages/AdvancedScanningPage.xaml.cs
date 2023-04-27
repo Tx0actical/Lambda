@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Windows.Storage.Streams;
 using Windows.Storage;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
 
 namespace Lambda {
     /// <summary>
@@ -35,26 +36,23 @@ namespace Lambda {
 
         private async void AdvButton_Click (object sender, RoutedEventArgs e) {
 
-            
             AdvancedButton.Visibility = Visibility.Collapsed;
-
             APIOperationsHandler __handler = new();
             advprogressbar.Visibility = Visibility.Visible;
-            dynamic response = await __handler.VTAPI_Upload_File (__handler.Request);
+            dynamic response = await __handler.VTAPI_Upload_File(__handler.Request);
 
             if (response.IsSuccessful) {
-                await DisplayStatusDialog ("Request sent successfully", "The request was sent successfully, and the server responded with a status code of " + response.StatusCode);
-                advprogressbar.IsIndeterminate = false;
-                advblock.Text = response.ToString ();
-                advblock.Visibility = Visibility.Visible;
+               
+                advprogressbar.Visibility = Visibility.Visible;
+                ShowCustomDialog ("Request sent successfully", "The request was sent successfully, and the server responded with a status code of " + response.StatusCode);
             } else {
-                await DisplayStatusDialog ("Request failed", "The request failed with a status code of " + response.StatusCode + ". Please try again.");
+                
+                advprogressbar.Visibility = Visibility.Visible;
                 advprogressbar.ShowError = true;
-                advblock.Text = "Failed";
-                advblock.Visibility = Visibility.Visible;
+                ShowCustomDialog ("Request sent successfully", "The request was sent successfully, and the server responded with a status code of " + response.StatusCode);
             }
-            
-            AdvancedButton = (Button) sender;
+
+            AdvancedButton = (AppBarButton) sender;
         }
 
         private async void PickObjectButton_Click (object sender, RoutedEventArgs e) {
@@ -79,14 +77,16 @@ namespace Lambda {
             }
         }
 
-        private async Task DisplayStatusDialog (string title, string message) {
-            ContentDialog statusDialog = new ContentDialog {
-                Title = title,
-                Content = message,
-                CloseButtonText = "Ok"
-            };
-            await statusDialog.ShowAsync ();
+        private void ShowCustomDialog (string title, string message) {
+            CustomDialogTitle.Text = title;
+            CustomDialogMessage.Text = message;
+            CustomDialogOverlay.Visibility = Visibility.Visible;
         }
+
+        private void CustomDialogCloseButton_Click (object sender, RoutedEventArgs e) {
+            CustomDialogOverlay.Visibility = Visibility.Collapsed;
+        }
+
 
     }
 }

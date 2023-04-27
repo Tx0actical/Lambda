@@ -6,16 +6,26 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource WindowCaptionButtonBackground}">
 
     <Grid>
-        <StackPanel x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
+        <StackPanel x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
+           
             <Button x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Content="Select Object" Height="44" Click="PickObjectButton_Click" HorizontalAlignment="Center"/>
             <TextBlock x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
             <Button  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="AdvButton_Click" HorizontalAlignment="Center" Height="44">Scan Selected Object</Button>
-            <TextBlock x:Name="advblock" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44"/>
-            
-            <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
+            <ContentDialog x:Name="StatusDialog" CloseButtonText="Ok" />
+            <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
         </StackPanel>
+
+        <Grid x:Name="CustomDialogOverlay" Visibility="Collapsed">
+            <Rectangle Fill="Black" Opacity="0.5" />
+            <Grid Width="300" Height="200" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="CustomDialogTitle" Text="Title" FontWeight="Bold" FontSize="20" Margin="10,10,10,0" />
+                <TextBlock x:Name="CustomDialogMessage" Text="Message" FontSize="16" Margin="10,40,10,0" TextWrapping="Wrap" />
+                <Button x:Name="CustomDialogCloseButton" Content="OK" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="CustomDialogCloseButton_Click" />
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
+
