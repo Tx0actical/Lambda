@@ -259,20 +259,20 @@ namespace Lambda.Lambda_XamlTypeInfo
             _typeNameTable[31] = "Lambda.MainWindow";
             _typeNameTable[32] = "Microsoft.UI.Xaml.Window";
             _typeNameTable[33] = "Microsoft.UI.Xaml.XamlRoot";
-            _typeNameTable[34] = "Lambda.AccountPage";
-            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.Page";
-            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.ProgressBar";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.Primitives.RangeBase";
-            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings";
-            _typeNameTable[40] = "Lambda.AdvancedScanningPage";
-            _typeNameTable[41] = "Lambda.HelpPage";
-            _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.InfoBar";
-            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.InfoBarSeverity";
-            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase";
-            _typeNameTable[45] = "System.Windows.Input.ICommand";
-            _typeNameTable[46] = "Microsoft.UI.Xaml.Controls.IconSource";
-            _typeNameTable[47] = "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings";
+            _typeNameTable[34] = "Microsoft.UI.Xaml.Controls.InfoBar";
+            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.InfoBarSeverity";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase";
+            _typeNameTable[37] = "System.Windows.Input.ICommand";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.IconSource";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings";
+            _typeNameTable[40] = "Lambda.AccountPage";
+            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.ProgressBar";
+            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.Primitives.RangeBase";
+            _typeNameTable[45] = "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings";
+            _typeNameTable[46] = "Lambda.AdvancedScanningPage";
+            _typeNameTable[47] = "Lambda.HelpPage";
             _typeNameTable[48] = "Lambda.HomePage";
             _typeNameTable[49] = "Lambda.ResultsPage";
             _typeNameTable[50] = "Lambda.ScanHistoryPage";
@@ -316,20 +316,20 @@ namespace Lambda.Lambda_XamlTypeInfo
             _typeTable[31] = typeof(global::Lambda.MainWindow);
             _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Window);
             _typeTable[33] = typeof(global::Microsoft.UI.Xaml.XamlRoot);
-            _typeTable[34] = typeof(global::Lambda.AccountPage);
-            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
-            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBar);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.RangeBase);
-            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings);
-            _typeTable[40] = typeof(global::Lambda.AdvancedScanningPage);
-            _typeTable[41] = typeof(global::Lambda.HelpPage);
-            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBar);
-            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarSeverity);
-            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase);
-            _typeTable[45] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
-            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings);
+            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBar);
+            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarSeverity);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase);
+            _typeTable[37] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings);
+            _typeTable[40] = typeof(global::Lambda.AccountPage);
+            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBar);
+            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.RangeBase);
+            _typeTable[45] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings);
+            _typeTable[46] = typeof(global::Lambda.AdvancedScanningPage);
+            _typeTable[47] = typeof(global::Lambda.HelpPage);
             _typeTable[48] = typeof(global::Lambda.HomePage);
             _typeTable[49] = typeof(global::Lambda.ResultsPage);
             _typeTable[50] = typeof(global::Lambda.ScanHistoryPage);
@@ -378,12 +378,12 @@ namespace Lambda.Lambda_XamlTypeInfo
         private object Activate_27_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
         private object Activate_29_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
         private object Activate_31_MainWindow() { return new global::Lambda.MainWindow(); }
-        private object Activate_34_AccountPage() { return new global::Lambda.AccountPage(); }
-        private object Activate_37_ProgressBar() { return new global::Microsoft.UI.Xaml.Controls.ProgressBar(); }
-        private object Activate_40_AdvancedScanningPage() { return new global::Lambda.AdvancedScanningPage(); }
-        private object Activate_41_HelpPage() { return new global::Lambda.HelpPage(); }
-        private object Activate_42_InfoBar() { return new global::Microsoft.UI.Xaml.Controls.InfoBar(); }
-        private object Activate_47_InfoBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings(); }
+        private object Activate_34_InfoBar() { return new global::Microsoft.UI.Xaml.Controls.InfoBar(); }
+        private object Activate_39_InfoBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings(); }
+        private object Activate_40_AccountPage() { return new global::Lambda.AccountPage(); }
+        private object Activate_43_ProgressBar() { return new global::Microsoft.UI.Xaml.Controls.ProgressBar(); }
+        private object Activate_46_AdvancedScanningPage() { return new global::Lambda.AdvancedScanningPage(); }
+        private object Activate_47_HelpPage() { return new global::Lambda.HelpPage(); }
         private object Activate_48_HomePage() { return new global::Lambda.HomePage(); }
         private object Activate_49_ResultsPage() { return new global::Lambda.ResultsPage(); }
         private object Activate_50_ScanHistoryPage() { return new global::Lambda.ScanHistoryPage(); }
@@ -645,58 +645,9 @@ namespace Lambda.Lambda_XamlTypeInfo
                 xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 34:   //  Lambda.AccountPage
-                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_34_AccountPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 35:   //  Microsoft.UI.Xaml.Controls.Page
-                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 36:   //  Microsoft.UI.Xaml.Controls.UserControl
-                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 37:   //  Microsoft.UI.Xaml.Controls.ProgressBar
-                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
-                userType.Activator = Activate_37_ProgressBar;
-                userType.AddMemberName("IsIndeterminate");
-                userType.AddMemberName("ShowPaused");
-                userType.AddMemberName("ShowError");
-                userType.AddMemberName("TemplateSettings");
-                xamlType = userType;
-                break;
-
-            case 38:   //  Microsoft.UI.Xaml.Controls.Primitives.RangeBase
-                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 39:   //  Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings
-                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 40:   //  Lambda.AdvancedScanningPage
-                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_40_AdvancedScanningPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 41:   //  Lambda.HelpPage
-                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_41_HelpPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 42:   //  Microsoft.UI.Xaml.Controls.InfoBar
+            case 34:   //  Microsoft.UI.Xaml.Controls.InfoBar
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_42_InfoBar;
+                userType.Activator = Activate_34_InfoBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.InfoBar.Content");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("IsOpen");
@@ -715,7 +666,7 @@ namespace Lambda.Lambda_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 43:   //  Microsoft.UI.Xaml.Controls.InfoBarSeverity
+            case 35:   //  Microsoft.UI.Xaml.Controls.InfoBarSeverity
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Informational", global::Microsoft.UI.Xaml.Controls.InfoBarSeverity.Informational);
                 userType.AddEnumValue("Success", global::Microsoft.UI.Xaml.Controls.InfoBarSeverity.Success);
@@ -724,23 +675,72 @@ namespace Lambda.Lambda_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 44:   //  Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
+            case 36:   //  Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
                 xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 45:   //  System.Windows.Input.ICommand
+            case 37:   //  System.Windows.Input.ICommand
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 46:   //  Microsoft.UI.Xaml.Controls.IconSource
+            case 38:   //  Microsoft.UI.Xaml.Controls.IconSource
                 xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 47:   //  Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings
+            case 39:   //  Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 40:   //  Lambda.AccountPage
+                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_40_AccountPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 41:   //  Microsoft.UI.Xaml.Controls.Page
+                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 42:   //  Microsoft.UI.Xaml.Controls.UserControl
+                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 43:   //  Microsoft.UI.Xaml.Controls.ProgressBar
+                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
+                userType.Activator = Activate_43_ProgressBar;
+                userType.AddMemberName("IsIndeterminate");
+                userType.AddMemberName("ShowPaused");
+                userType.AddMemberName("ShowError");
+                userType.AddMemberName("TemplateSettings");
+                xamlType = userType;
+                break;
+
+            case 44:   //  Microsoft.UI.Xaml.Controls.Primitives.RangeBase
+                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 45:   //  Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings
+                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 46:   //  Lambda.AdvancedScanningPage
+                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_46_AdvancedScanningPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 47:   //  Lambda.HelpPage
+                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_47_HelpPage;
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
@@ -1305,174 +1305,174 @@ namespace Lambda.Lambda_XamlTypeInfo
             var that = (global::Lambda.MainWindow)instance;
             return that.XamlRoot;
         }
-        private object get_49_ProgressBar_IsIndeterminate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
-            return that.IsIndeterminate;
-        }
-        private void set_49_ProgressBar_IsIndeterminate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
-            that.IsIndeterminate = (global::System.Boolean)Value;
-        }
-        private object get_50_ProgressBar_ShowPaused(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
-            return that.ShowPaused;
-        }
-        private void set_50_ProgressBar_ShowPaused(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
-            that.ShowPaused = (global::System.Boolean)Value;
-        }
-        private object get_51_ProgressBar_ShowError(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
-            return that.ShowError;
-        }
-        private void set_51_ProgressBar_ShowError(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
-            that.ShowError = (global::System.Boolean)Value;
-        }
-        private object get_52_ProgressBar_TemplateSettings(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
-            return that.TemplateSettings;
-        }
-        private object get_53_InfoBar_Content(object instance)
+        private object get_49_InfoBar_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.Content;
         }
-        private void set_53_InfoBar_Content(object instance, object Value)
+        private void set_49_InfoBar_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_54_InfoBar_IsOpen(object instance)
+        private object get_50_InfoBar_IsOpen(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.IsOpen;
         }
-        private void set_54_InfoBar_IsOpen(object instance, object Value)
+        private void set_50_InfoBar_IsOpen(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.IsOpen = (global::System.Boolean)Value;
         }
-        private object get_55_InfoBar_IsClosable(object instance)
+        private object get_51_InfoBar_IsClosable(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.IsClosable;
         }
-        private void set_55_InfoBar_IsClosable(object instance, object Value)
+        private void set_51_InfoBar_IsClosable(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.IsClosable = (global::System.Boolean)Value;
         }
-        private object get_56_InfoBar_Severity(object instance)
+        private object get_52_InfoBar_Severity(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.Severity;
         }
-        private void set_56_InfoBar_Severity(object instance, object Value)
+        private void set_52_InfoBar_Severity(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.Severity = (global::Microsoft.UI.Xaml.Controls.InfoBarSeverity)Value;
         }
-        private object get_57_InfoBar_Title(object instance)
+        private object get_53_InfoBar_Title(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.Title;
         }
-        private void set_57_InfoBar_Title(object instance, object Value)
+        private void set_53_InfoBar_Title(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.Title = (global::System.String)Value;
         }
-        private object get_58_InfoBar_Message(object instance)
+        private object get_54_InfoBar_Message(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.Message;
         }
-        private void set_58_InfoBar_Message(object instance, object Value)
+        private void set_54_InfoBar_Message(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.Message = (global::System.String)Value;
         }
-        private object get_59_InfoBar_ActionButton(object instance)
+        private object get_55_InfoBar_ActionButton(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.ActionButton;
         }
-        private void set_59_InfoBar_ActionButton(object instance, object Value)
+        private void set_55_InfoBar_ActionButton(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.ActionButton = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)Value;
         }
-        private object get_60_InfoBar_CloseButtonCommand(object instance)
+        private object get_56_InfoBar_CloseButtonCommand(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.CloseButtonCommand;
         }
-        private void set_60_InfoBar_CloseButtonCommand(object instance, object Value)
+        private void set_56_InfoBar_CloseButtonCommand(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.CloseButtonCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_61_InfoBar_CloseButtonCommandParameter(object instance)
+        private object get_57_InfoBar_CloseButtonCommandParameter(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.CloseButtonCommandParameter;
         }
-        private void set_61_InfoBar_CloseButtonCommandParameter(object instance, object Value)
+        private void set_57_InfoBar_CloseButtonCommandParameter(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.CloseButtonCommandParameter = (global::System.Object)Value;
         }
-        private object get_62_InfoBar_CloseButtonStyle(object instance)
+        private object get_58_InfoBar_CloseButtonStyle(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.CloseButtonStyle;
         }
-        private void set_62_InfoBar_CloseButtonStyle(object instance, object Value)
+        private void set_58_InfoBar_CloseButtonStyle(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.CloseButtonStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_63_InfoBar_ContentTemplate(object instance)
+        private object get_59_InfoBar_ContentTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.ContentTemplate;
         }
-        private void set_63_InfoBar_ContentTemplate(object instance, object Value)
+        private void set_59_InfoBar_ContentTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.ContentTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_64_InfoBar_IconSource(object instance)
+        private object get_60_InfoBar_IconSource(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.IconSource;
         }
-        private void set_64_InfoBar_IconSource(object instance, object Value)
+        private void set_60_InfoBar_IconSource(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.IconSource = (global::Microsoft.UI.Xaml.Controls.IconSource)Value;
         }
-        private object get_65_InfoBar_IsIconVisible(object instance)
+        private object get_61_InfoBar_IsIconVisible(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.IsIconVisible;
         }
-        private void set_65_InfoBar_IsIconVisible(object instance, object Value)
+        private void set_61_InfoBar_IsIconVisible(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.IsIconVisible = (global::System.Boolean)Value;
         }
-        private object get_66_InfoBar_TemplateSettings(object instance)
+        private object get_62_InfoBar_TemplateSettings(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.TemplateSettings;
+        }
+        private object get_63_ProgressBar_IsIndeterminate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            return that.IsIndeterminate;
+        }
+        private void set_63_ProgressBar_IsIndeterminate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            that.IsIndeterminate = (global::System.Boolean)Value;
+        }
+        private object get_64_ProgressBar_ShowPaused(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            return that.ShowPaused;
+        }
+        private void set_64_ProgressBar_ShowPaused(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            that.ShowPaused = (global::System.Boolean)Value;
+        }
+        private object get_65_ProgressBar_ShowError(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            return that.ShowError;
+        }
+        private void set_65_ProgressBar_ShowError(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            that.ShowError = (global::System.Boolean)Value;
+        }
+        private object get_66_ProgressBar_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             return that.TemplateSettings;
         }
         private object get_67_ProgressRing_IsActive(object instance)
@@ -1880,129 +1880,129 @@ namespace Lambda.Lambda_XamlTypeInfo
                 xamlMember.Getter = get_48_MainWindow_XamlRoot;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.UI.Xaml.Controls.ProgressBar.IsIndeterminate":
-                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
-                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsIndeterminate", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_49_ProgressBar_IsIndeterminate;
-                xamlMember.Setter = set_49_ProgressBar_IsIndeterminate;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ProgressBar.ShowPaused":
-                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
-                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ShowPaused", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_50_ProgressBar_ShowPaused;
-                xamlMember.Setter = set_50_ProgressBar_ShowPaused;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ProgressBar.ShowError":
-                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
-                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ShowError", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_51_ProgressBar_ShowError;
-                xamlMember.Setter = set_51_ProgressBar_ShowError;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ProgressBar.TemplateSettings":
-                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
-                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings");
-                xamlMember.Getter = get_52_ProgressBar_TemplateSettings;
-                xamlMember.SetIsReadOnly();
-                break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.Content":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_53_InfoBar_Content;
-                xamlMember.Setter = set_53_InfoBar_Content;
+                xamlMember.Getter = get_49_InfoBar_Content;
+                xamlMember.Setter = set_49_InfoBar_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.IsOpen":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_54_InfoBar_IsOpen;
-                xamlMember.Setter = set_54_InfoBar_IsOpen;
+                xamlMember.Getter = get_50_InfoBar_IsOpen;
+                xamlMember.Setter = set_50_InfoBar_IsOpen;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.IsClosable":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsClosable", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_55_InfoBar_IsClosable;
-                xamlMember.Setter = set_55_InfoBar_IsClosable;
+                xamlMember.Getter = get_51_InfoBar_IsClosable;
+                xamlMember.Setter = set_51_InfoBar_IsClosable;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.Severity":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Severity", "Microsoft.UI.Xaml.Controls.InfoBarSeverity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_56_InfoBar_Severity;
-                xamlMember.Setter = set_56_InfoBar_Severity;
+                xamlMember.Getter = get_52_InfoBar_Severity;
+                xamlMember.Setter = set_52_InfoBar_Severity;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.Title":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_57_InfoBar_Title;
-                xamlMember.Setter = set_57_InfoBar_Title;
+                xamlMember.Getter = get_53_InfoBar_Title;
+                xamlMember.Setter = set_53_InfoBar_Title;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.Message":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Message", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_58_InfoBar_Message;
-                xamlMember.Setter = set_58_InfoBar_Message;
+                xamlMember.Getter = get_54_InfoBar_Message;
+                xamlMember.Setter = set_54_InfoBar_Message;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.ActionButton":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ActionButton", "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_59_InfoBar_ActionButton;
-                xamlMember.Setter = set_59_InfoBar_ActionButton;
+                xamlMember.Getter = get_55_InfoBar_ActionButton;
+                xamlMember.Setter = set_55_InfoBar_ActionButton;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonCommand":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "CloseButtonCommand", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_60_InfoBar_CloseButtonCommand;
-                xamlMember.Setter = set_60_InfoBar_CloseButtonCommand;
+                xamlMember.Getter = get_56_InfoBar_CloseButtonCommand;
+                xamlMember.Setter = set_56_InfoBar_CloseButtonCommand;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonCommandParameter":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "CloseButtonCommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_61_InfoBar_CloseButtonCommandParameter;
-                xamlMember.Setter = set_61_InfoBar_CloseButtonCommandParameter;
+                xamlMember.Getter = get_57_InfoBar_CloseButtonCommandParameter;
+                xamlMember.Setter = set_57_InfoBar_CloseButtonCommandParameter;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonStyle":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "CloseButtonStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_InfoBar_CloseButtonStyle;
-                xamlMember.Setter = set_62_InfoBar_CloseButtonStyle;
+                xamlMember.Getter = get_58_InfoBar_CloseButtonStyle;
+                xamlMember.Setter = set_58_InfoBar_CloseButtonStyle;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.ContentTemplate":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ContentTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_InfoBar_ContentTemplate;
-                xamlMember.Setter = set_63_InfoBar_ContentTemplate;
+                xamlMember.Getter = get_59_InfoBar_ContentTemplate;
+                xamlMember.Setter = set_59_InfoBar_ContentTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.IconSource":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IconSource", "Microsoft.UI.Xaml.Controls.IconSource");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_InfoBar_IconSource;
-                xamlMember.Setter = set_64_InfoBar_IconSource;
+                xamlMember.Getter = get_60_InfoBar_IconSource;
+                xamlMember.Setter = set_60_InfoBar_IconSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.IsIconVisible":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsIconVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_InfoBar_IsIconVisible;
-                xamlMember.Setter = set_65_InfoBar_IsIconVisible;
+                xamlMember.Getter = get_61_InfoBar_IsIconVisible;
+                xamlMember.Setter = set_61_InfoBar_IsIconVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.TemplateSettings":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_InfoBar_TemplateSettings;
+                xamlMember.Getter = get_62_InfoBar_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressBar.IsIndeterminate":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsIndeterminate", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_63_ProgressBar_IsIndeterminate;
+                xamlMember.Setter = set_63_ProgressBar_IsIndeterminate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressBar.ShowPaused":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ShowPaused", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_64_ProgressBar_ShowPaused;
+                xamlMember.Setter = set_64_ProgressBar_ShowPaused;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressBar.ShowError":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ShowError", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_65_ProgressBar_ShowError;
+                xamlMember.Setter = set_65_ProgressBar_ShowError;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressBar.TemplateSettings":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings");
+                xamlMember.Getter = get_66_ProgressBar_TemplateSettings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressRing.IsActive":

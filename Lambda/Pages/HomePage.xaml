@@ -20,11 +20,12 @@
                 </InfoBar.ActionButton>
 
             </InfoBar>
-            <RichTextBlock Grid.Row="0" TextAlignment="Left" Margin="12,12">
+            <RichTextBlock Grid.Row="0" TextAlignment="Left" Margin="0, 25">
 
                 <Paragraph>
                     In general, AV products feature complex architecture with many interacting components static, dynamic, and heuristic engines, sandbox, scanner, emulator, unpacker and so on. This increases the overall size of the program and the attack surface.
                 </Paragraph>
+                <Paragraph></Paragraph>
                 <Paragraph>
                     One of the design goal of LAMBDA is simplicity. By utilising the VirusTotal API for detection, we aim to significantly cut down on the complexity that AV products generally work with.
                 </Paragraph>
