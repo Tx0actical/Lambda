@@ -40,6 +40,11 @@ namespace Lambda
         {
             m_window = new MainWindow();
             m_window.Activate();
+#if DEBUG
+            if (System.Diagnostics.Debugger.IsAttached) {
+                this.DebugSettings.IsTextPerformanceVisualizationEnabled = true;
+            }
+#endif  
         }
 
         private Window m_window;

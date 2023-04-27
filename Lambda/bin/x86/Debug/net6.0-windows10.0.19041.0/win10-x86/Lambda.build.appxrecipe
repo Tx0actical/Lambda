@@ -37,6 +37,9 @@
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>Lambda.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\WindowsIcon.ico">
+      <PackagePath>Assets\WindowsIcon.ico</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.deps.json">
       <PackagePath>Lambda.deps.json</PackagePath>
     </AppxPackagedFile>
@@ -783,6 +786,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\WindowsIcon.png">
+      <PackagePath>Assets\WindowsIcon.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -4,7 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource WindowCaptionButtonBackground}">
@@ -13,7 +12,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid x:ConnectionId='2' x:Name="AppTitleBar" Background="{ThemeResource WindowCaptionButtonBackground}">
-            <Image Source="C:\Users\mannu\OneDrive - Chandigarh University\Icons\WindowsIcon.png"
+            <Image Source="Assets\WindowsIcon.png"
                    HorizontalAlignment="Left" 
                    Width="16" Height="16" 
                    Margin="8,0"/>
@@ -28,18 +27,21 @@
                                                          
                                                
                                                              
-                        Header="{Binding ElementName=headerText, Path=Text, Mode=TwoWay}"
-                        PaneTitle="{Binding ElementName=paneText, Path=Text, Mode=TwoWay}"
+                        
+                        PaneTitle="{Binding ElementName=headerText, Path=Text, Mode=TwoWay}"
                         PaneDisplayMode="Auto"
                         ExpandedModeThresholdWidth="600"
                         IsTabStop="False"
                         IsBackEnabled="True"
                         IsSettingsVisible="False"
                         IsBackButtonVisible="Auto"
+                        
+                        
                         Background="{ThemeResource WindowCaptionButtonBackground}"
                         Grid.Row="1"
                         AlwaysShowHeader="True"
                         IsPaneToggleButtonVisible ="True">
+            
 
             <NavigationView.MenuItems>
 
@@ -67,28 +69,30 @@
                         <SymbolIcon Symbol="Target"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                
+            </NavigationView.MenuItems>
+            <NavigationView.FooterMenuItems>
                 <NavigationViewItemHeader Content="Attributes"/>
                 <NavigationViewItem x:ConnectionId='8' Content="Account" Tag="Tag_AccountInformationPage" x:Name="AccountPage">
                     <NavigationViewItem.Icon>
                         <SymbolIcon Symbol="Account"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                
+
                 <NavigationViewItem x:ConnectionId='9' Content="Help" Tag="Tag_HelpPage" x:Name="HelpPage">
                     <NavigationViewItem.Icon>
                         <SymbolIcon Symbol="Help"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                
+
                 <NavigationViewItem x:ConnectionId='10' Content="Settings" Tag="Tag_SettingsPage" x:Name="SettingsPage">
                     <NavigationViewItem.Icon>
                         <SymbolIcon Symbol="Setting"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-            </NavigationView.MenuItems>
+            </NavigationView.FooterMenuItems>
 
-            <Frame x:ConnectionId='11' x:Name="ContentFrame" />
+
+            <Frame x:ConnectionId='11' x:Name="ContentFrame"/>
         </NavigationView>
     </Grid>
 
