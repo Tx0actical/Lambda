@@ -29,29 +29,33 @@
     <AppXManifest Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-22T18:26:44.801</Modified>
+      <Modified>2023-04-27T07:17:47.231</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-04-22T18:26:44.565</Modified>
+      <Modified>2023-04-27T07:17:47.060</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.runtimeconfig.json">
       <PackagePath>Lambda.runtimeconfig.json</PackagePath>
-      <Modified>2023-04-22T18:26:44.383</Modified>
+      <Modified>2023-04-23T06:35:58.019</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.dll">
       <PackagePath>Lambda.dll</PackagePath>
-      <Modified>2023-04-22T18:26:43.227</Modified>
+      <Modified>2023-04-27T07:17:46.947</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>Lambda.exe</PackagePath>
-      <Modified>2023-04-22T18:26:43.238</Modified>
+      <Modified>2023-04-27T07:17:46.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\WindowsIcon.ico">
+      <PackagePath>Assets\WindowsIcon.ico</PackagePath>
+      <Modified>2023-04-23T06:23:55.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.deps.json">
       <PackagePath>Lambda.deps.json</PackagePath>
-      <Modified>2023-04-22T18:26:44.299</Modified>
+      <Modified>2023-04-25T16:41:07.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.16\runtimes\win-x86\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1044,6 +1048,10 @@
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <Modified>2023-02-21T15:20:25.168</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\WindowsIcon.png">
+      <PackagePath>Assets\WindowsIcon.png</PackagePath>
+      <Modified>2022-07-22T14:16:46.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

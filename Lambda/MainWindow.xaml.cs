@@ -10,6 +10,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Windows.UI.Core;
 using Windows.System;
+using Microsoft.UI.Dispatching;
+using Microsoft.UI.Windowing;
+using WinRT;
 
 namespace Lambda {
 
@@ -55,6 +58,12 @@ namespace Lambda {
             ExtendsContentIntoTitleBar = true;
             Activated += MainWindow_Activated;
             SetTitleBar (AppTitleBar);
+
+            // Add Icon
+            IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            WindowId windowId = Win32Interop.GetWindowIdFromWindow(hWnd);
+            AppWindow appWindow = AppWindow.GetFromWindowId(windowId);
+            appWindow.SetIcon ("Assets/WindowsIcon.ico");
         }
 
         // Functions for Controls
@@ -143,7 +152,7 @@ namespace Lambda {
                 string tag = item.Tag.ToString();
                 var pageItem = _pages.FirstOrDefault(p => p.Tag == tag);
 
-                if (pageItem.Page == null) {
+                if (pageItem.Equals (default ((string, Type)))) {
                     System.Diagnostics.Debug.WriteLine ($"No NavigationViewItem found for {tag}.");
                 } else {
                     // Check if the page is already loaded
@@ -176,7 +185,7 @@ namespace Lambda {
         public List<NavigationViewItem> GetNavigationViewItems (Type type, string title) {
             return GetNavigationViewItems (type).Where (ni => ni.Content.ToString () == title).ToList ();
         }
-
+ 
         public NavigationViewItem GetCurrentNavigationViewItem () {
             return NavView.SelectedItem as NavigationViewItem;
         }
@@ -193,9 +202,6 @@ namespace Lambda {
 
         private void NavView_Loaded (object sender, RoutedEventArgs e) {
             // Reference: https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview
-            //if (ContentFrame.Content == null) {
-            //    ContentFrame.Navigate (typeof (AdvancedScanningPage), null, new DrillInNavigationTransitionInfo ());
-            //}
 
             if (ContentFrame.Content == null) {
                 ContentFrame.Navigate (typeof (HomePage), null, new DrillInNavigationTransitionInfo ());
@@ -272,8 +278,6 @@ namespace Lambda {
         private void NavView_BackRequested (NavigationView sender, NavigationViewBackRequestedEventArgs args) {
             TryGoBack ();
         }
-
-
 
     }
 }

@@ -1,85 +1,92 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI;
 using Windows.Storage.Pickers;
+using Program; // local namespace for APIHandler.cs
+using RestSharp;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using Windows.Storage.Streams;
+using Windows.Storage;
+using System.Runtime.InteropServices.WindowsRuntime;
 
-namespace Lambda
-{
+namespace Lambda {
     /// <summary>
     /// Page displaying the advanced scanning options.
     /// </summary>
-    public sealed partial class AdvancedScanningPage : Page
-    {
-        public AdvancedScanningPage() {
-            this.InitializeComponent();
-        }
+    public sealed partial class AdvancedScanningPage : Page {
 
-        protected override void OnNavigatedTo(NavigationEventArgs e) {
-            base.OnNavigatedTo(e);
-        }
-
-        private static int SuccessStatusCode = 200;
+        
         public static bool CameFromToggle = false;
         public static bool CameFromGridChange = false;
+        public dynamic fileContent;
 
-        private void AdvButton_Click (object sender, RoutedEventArgs e) {
+        public AdvancedScanningPage () {
+            this.InitializeComponent ();
+        }
 
-            ContentDialog RequestSuccessDialog = new ContentDialog ();
-            ContentDialog RequestErrorDialog = new ContentDialog ();
+        protected override void OnNavigatedTo (NavigationEventArgs e) {
+            base.OnNavigatedTo (e);
+        }
 
+        private async void AdvButton_Click (object sender, RoutedEventArgs e) {
 
-            // TODO: need to bind this action with sending request
-            // TODO: if request is success, display content dialoue showing the process.
-
-            advblock.Text = "Sample Sent. Awaiting response...";
+            
             AdvancedButton.Visibility = Visibility.Collapsed;
-            ContentDialog dialog = new ContentDialog ();
 
-            // TODO: else display error dialogue
-            if (SuccessStatusCode != 200) {
-                /* call error dialogue code */
-                advblock.Text = "Error Receiving Response";
-                advprogressbar.Visibility = Visibility.Visible;
+            APIOperationsHandler __handler = new();
+            advprogressbar.Visibility = Visibility.Visible;
+            dynamic response = await __handler.VTAPI_Upload_File (__handler.Request);
+
+            if (response.IsSuccessful) {
+                await DisplayStatusDialog ("Request sent successfully", "The request was sent successfully, and the server responded with a status code of " + response.StatusCode);
+                advprogressbar.IsIndeterminate = false;
+                advblock.Text = response.ToString ();
+                advblock.Visibility = Visibility.Visible;
+            } else {
+                await DisplayStatusDialog ("Request failed", "The request failed with a status code of " + response.StatusCode + ". Please try again.");
+                advprogressbar.ShowError = true;
+                advblock.Text = "Failed";
+                advblock.Visibility = Visibility.Visible;
             }
+            
             AdvancedButton = (Button) sender;
         }
 
-        private async void PickAFileButton_Click (object sender, RoutedEventArgs e) {
+        private async void PickObjectButton_Click (object sender, RoutedEventArgs e) {
 
-            PickAFileOutputTextBlock.Text = "";
-            var openPicker = new Windows.Storage.Pickers.FileOpenPicker();
+            var openPicker = new FileOpenPicker() { 
+                ViewMode = PickerViewMode.Thumbnail,
+                FileTypeFilter = { "*" },
+            };
 
+            // Initialize Window
             IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
-            WindowId myWndId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
-
+            WindowId myWndId = Win32Interop.GetWindowIdFromWindow(hWnd);
             WinRT.Interop.InitializeWithWindow.Initialize (openPicker, hWnd);
-
-            openPicker.ViewMode = PickerViewMode.Thumbnail;
-            openPicker.FileTypeFilter.Add ("*");
 
             var file = await openPicker.PickSingleFileAsync();
             if (file != null) {
                 PickAFileOutputTextBlock.Text = "Selected File : " + file.Name;
+                IBuffer buffer = await FileIO.ReadBufferAsync(file);
+                byte[] fileContent = buffer.ToArray();  // Pass the fileContent to the SendObjectButton_Click method or another method to handle the file content
             } else {
                 PickAFileOutputTextBlock.Text = "Operation Cancelled";
             }
         }
 
-        private async void Error_Opened (ContentDialog sender, ContentDialogOpenedEventArgs args) {
-            ContentDialogResult result = await ErrorContentDialog.ShowAsync();
-            if (result == ContentDialogResult.Primary) { /* code to retry request */ } else { /* user pressed cancel, ESC, or back arrow */}
+        private async Task DisplayStatusDialog (string title, string message) {
+            ContentDialog statusDialog = new ContentDialog {
+                Title = title,
+                Content = message,
+                CloseButtonText = "Ok"
+            };
+            await statusDialog.ShowAsync ();
         }
+
     }
 }

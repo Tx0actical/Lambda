@@ -1,6 +1,3 @@
-<!-- Copyright (c) Microsoft Corporation and Contributors. -->
-<!-- Licensed under the MIT License. -->
-
 <Page
     x:Class="Lambda.AdvancedScanningPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -13,22 +10,12 @@
 
     <Grid>
         <StackPanel x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
-            <Button x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Content="Select Object" Height="44" Click="PickAFileButton_Click" HorizontalAlignment="Center"/>
+            <Button x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Content="Select Object" Height="44" Click="PickObjectButton_Click" HorizontalAlignment="Center"/>
             <TextBlock x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
             <Button  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="AdvButton_Click" HorizontalAlignment="Center" Height="44">Scan Selected Object</Button>
-            <ContentDialog x:Name="ErrorContentDialog"
-                                   PrimaryButtonText="Retry"
-                                   IsPrimaryButtonEnabled="False"
-                                   CloseButtonText="Cancel"
-                                   Opened="Error_Opened">
-                <StackPanel x:Name="ErrorStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="100">
-                    <TextBlock TextWrapping="WrapWholeWords">
-                                <Run>Error Receiving Response.</Run>
-                    </TextBlock>
-                </StackPanel>
-            </ContentDialog>
             <TextBlock x:Name="advblock" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44"/>
-            <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
+            
+            <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>
