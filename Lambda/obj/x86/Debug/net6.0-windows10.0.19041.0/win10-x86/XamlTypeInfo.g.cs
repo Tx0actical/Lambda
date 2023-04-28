@@ -224,7 +224,7 @@ namespace Lambda.Lambda_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[55];
+            _typeNameTable = new string[60];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -265,23 +265,28 @@ namespace Lambda.Lambda_XamlTypeInfo
             _typeNameTable[37] = "System.Windows.Input.ICommand";
             _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.IconSource";
             _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings";
-            _typeNameTable[40] = "Lambda.AccountPage";
-            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.Page";
-            _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.ProgressBar";
-            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.Primitives.RangeBase";
-            _typeNameTable[45] = "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings";
-            _typeNameTable[46] = "Lambda.AdvancedScanningPage";
-            _typeNameTable[47] = "Lambda.HelpPage";
-            _typeNameTable[48] = "Lambda.HomePage";
-            _typeNameTable[49] = "Lambda.ResultsPage";
-            _typeNameTable[50] = "Lambda.ScanHistoryPage";
-            _typeNameTable[51] = "Lambda.SettingsPage";
-            _typeNameTable[52] = "Microsoft.UI.Xaml.Controls.ProgressRing";
-            _typeNameTable[53] = "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings";
-            _typeNameTable[54] = "Lambda.UserControl1";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.PersonPicture";
+            _typeNameTable[41] = "Microsoft.UI.Xaml.Media.ImageSource";
+            _typeNameTable[42] = "Int32";
+            _typeNameTable[43] = "Windows.ApplicationModel.Contacts.Contact";
+            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings";
+            _typeNameTable[45] = "Lambda.AccountPage";
+            _typeNameTable[46] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[47] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[48] = "Microsoft.UI.Xaml.Controls.ProgressBar";
+            _typeNameTable[49] = "Microsoft.UI.Xaml.Controls.Primitives.RangeBase";
+            _typeNameTable[50] = "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings";
+            _typeNameTable[51] = "Lambda.AdvancedScanningPage";
+            _typeNameTable[52] = "Lambda.HelpPage";
+            _typeNameTable[53] = "Lambda.HomePage";
+            _typeNameTable[54] = "Lambda.ResultsPage";
+            _typeNameTable[55] = "Lambda.ScanHistoryPage";
+            _typeNameTable[56] = "Lambda.SettingsPage";
+            _typeNameTable[57] = "Microsoft.UI.Xaml.Controls.ProgressRing";
+            _typeNameTable[58] = "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings";
+            _typeNameTable[59] = "Lambda.UserControl1";
 
-            _typeTable = new global::System.Type[55];
+            _typeTable = new global::System.Type[60];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -322,21 +327,26 @@ namespace Lambda.Lambda_XamlTypeInfo
             _typeTable[37] = typeof(global::System.Windows.Input.ICommand);
             _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
             _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings);
-            _typeTable[40] = typeof(global::Lambda.AccountPage);
-            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
-            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBar);
-            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.RangeBase);
-            _typeTable[45] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings);
-            _typeTable[46] = typeof(global::Lambda.AdvancedScanningPage);
-            _typeTable[47] = typeof(global::Lambda.HelpPage);
-            _typeTable[48] = typeof(global::Lambda.HomePage);
-            _typeTable[49] = typeof(global::Lambda.ResultsPage);
-            _typeTable[50] = typeof(global::Lambda.ScanHistoryPage);
-            _typeTable[51] = typeof(global::Lambda.SettingsPage);
-            _typeTable[52] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRing);
-            _typeTable[53] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings);
-            _typeTable[54] = typeof(global::Lambda.UserControl1);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.PersonPicture);
+            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
+            _typeTable[42] = typeof(global::System.Int32);
+            _typeTable[43] = typeof(global::Windows.ApplicationModel.Contacts.Contact);
+            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings);
+            _typeTable[45] = typeof(global::Lambda.AccountPage);
+            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[48] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBar);
+            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.RangeBase);
+            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings);
+            _typeTable[51] = typeof(global::Lambda.AdvancedScanningPage);
+            _typeTable[52] = typeof(global::Lambda.HelpPage);
+            _typeTable[53] = typeof(global::Lambda.HomePage);
+            _typeTable[54] = typeof(global::Lambda.ResultsPage);
+            _typeTable[55] = typeof(global::Lambda.ScanHistoryPage);
+            _typeTable[56] = typeof(global::Lambda.SettingsPage);
+            _typeTable[57] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRing);
+            _typeTable[58] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings);
+            _typeTable[59] = typeof(global::Lambda.UserControl1);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -380,16 +390,18 @@ namespace Lambda.Lambda_XamlTypeInfo
         private object Activate_31_MainWindow() { return new global::Lambda.MainWindow(); }
         private object Activate_34_InfoBar() { return new global::Microsoft.UI.Xaml.Controls.InfoBar(); }
         private object Activate_39_InfoBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings(); }
-        private object Activate_40_AccountPage() { return new global::Lambda.AccountPage(); }
-        private object Activate_43_ProgressBar() { return new global::Microsoft.UI.Xaml.Controls.ProgressBar(); }
-        private object Activate_46_AdvancedScanningPage() { return new global::Lambda.AdvancedScanningPage(); }
-        private object Activate_47_HelpPage() { return new global::Lambda.HelpPage(); }
-        private object Activate_48_HomePage() { return new global::Lambda.HomePage(); }
-        private object Activate_49_ResultsPage() { return new global::Lambda.ResultsPage(); }
-        private object Activate_50_ScanHistoryPage() { return new global::Lambda.ScanHistoryPage(); }
-        private object Activate_51_SettingsPage() { return new global::Lambda.SettingsPage(); }
-        private object Activate_52_ProgressRing() { return new global::Microsoft.UI.Xaml.Controls.ProgressRing(); }
-        private object Activate_54_UserControl1() { return new global::Lambda.UserControl1(); }
+        private object Activate_40_PersonPicture() { return new global::Microsoft.UI.Xaml.Controls.PersonPicture(); }
+        private object Activate_43_Contact() { return new global::Windows.ApplicationModel.Contacts.Contact(); }
+        private object Activate_45_AccountPage() { return new global::Lambda.AccountPage(); }
+        private object Activate_48_ProgressBar() { return new global::Microsoft.UI.Xaml.Controls.ProgressBar(); }
+        private object Activate_51_AdvancedScanningPage() { return new global::Lambda.AdvancedScanningPage(); }
+        private object Activate_52_HelpPage() { return new global::Lambda.HelpPage(); }
+        private object Activate_53_HomePage() { return new global::Lambda.HomePage(); }
+        private object Activate_54_ResultsPage() { return new global::Lambda.ResultsPage(); }
+        private object Activate_55_ScanHistoryPage() { return new global::Lambda.ScanHistoryPage(); }
+        private object Activate_56_SettingsPage() { return new global::Lambda.SettingsPage(); }
+        private object Activate_57_ProgressRing() { return new global::Microsoft.UI.Xaml.Controls.ProgressRing(); }
+        private object Activate_59_UserControl1() { return new global::Lambda.UserControl1(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -695,24 +707,61 @@ namespace Lambda.Lambda_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 40:   //  Lambda.AccountPage
+            case 40:   //  Microsoft.UI.Xaml.Controls.PersonPicture
+                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_40_PersonPicture;
+                userType.AddMemberName("Initials");
+                userType.AddMemberName("BadgeGlyph");
+                userType.AddMemberName("BadgeImageSource");
+                userType.AddMemberName("BadgeNumber");
+                userType.AddMemberName("BadgeText");
+                userType.AddMemberName("Contact");
+                userType.AddMemberName("DisplayName");
+                userType.AddMemberName("IsGroup");
+                userType.AddMemberName("PreferSmallImage");
+                userType.AddMemberName("ProfilePicture");
+                userType.AddMemberName("TemplateSettings");
+                xamlType = userType;
+                break;
+
+            case 41:   //  Microsoft.UI.Xaml.Media.ImageSource
+                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 42:   //  Int32
+                xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 43:   //  Windows.ApplicationModel.Contacts.Contact
+                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 44:   //  Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings
+                userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 45:   //  Lambda.AccountPage
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_40_AccountPage;
+                userType.Activator = Activate_45_AccountPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 41:   //  Microsoft.UI.Xaml.Controls.Page
+            case 46:   //  Microsoft.UI.Xaml.Controls.Page
                 xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 42:   //  Microsoft.UI.Xaml.Controls.UserControl
+            case 47:   //  Microsoft.UI.Xaml.Controls.UserControl
                 xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 43:   //  Microsoft.UI.Xaml.Controls.ProgressBar
+            case 48:   //  Microsoft.UI.Xaml.Controls.ProgressBar
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
-                userType.Activator = Activate_43_ProgressBar;
+                userType.Activator = Activate_48_ProgressBar;
                 userType.AddMemberName("IsIndeterminate");
                 userType.AddMemberName("ShowPaused");
                 userType.AddMemberName("ShowError");
@@ -720,61 +769,61 @@ namespace Lambda.Lambda_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 44:   //  Microsoft.UI.Xaml.Controls.Primitives.RangeBase
+            case 49:   //  Microsoft.UI.Xaml.Controls.Primitives.RangeBase
                 xamlType = new global::Lambda.Lambda_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 45:   //  Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings
+            case 50:   //  Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 46:   //  Lambda.AdvancedScanningPage
+            case 51:   //  Lambda.AdvancedScanningPage
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_46_AdvancedScanningPage;
+                userType.Activator = Activate_51_AdvancedScanningPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 47:   //  Lambda.HelpPage
+            case 52:   //  Lambda.HelpPage
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_47_HelpPage;
+                userType.Activator = Activate_52_HelpPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 48:   //  Lambda.HomePage
+            case 53:   //  Lambda.HomePage
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_48_HomePage;
+                userType.Activator = Activate_53_HomePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 49:   //  Lambda.ResultsPage
+            case 54:   //  Lambda.ResultsPage
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_49_ResultsPage;
+                userType.Activator = Activate_54_ResultsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 50:   //  Lambda.ScanHistoryPage
+            case 55:   //  Lambda.ScanHistoryPage
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_50_ScanHistoryPage;
+                userType.Activator = Activate_55_ScanHistoryPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 51:   //  Lambda.SettingsPage
+            case 56:   //  Lambda.SettingsPage
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_51_SettingsPage;
+                userType.Activator = Activate_56_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 52:   //  Microsoft.UI.Xaml.Controls.ProgressRing
+            case 57:   //  Microsoft.UI.Xaml.Controls.ProgressRing
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_52_ProgressRing;
+                userType.Activator = Activate_57_ProgressRing;
                 userType.AddMemberName("IsActive");
                 userType.AddMemberName("IsIndeterminate");
                 userType.AddMemberName("Maximum");
@@ -784,15 +833,15 @@ namespace Lambda.Lambda_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 53:   //  Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings
+            case 58:   //  Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 54:   //  Lambda.UserControl1
+            case 59:   //  Lambda.UserControl1
                 userType = new global::Lambda.Lambda_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_54_UserControl1;
+                userType.Activator = Activate_59_UserControl1;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -1440,92 +1489,197 @@ namespace Lambda.Lambda_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.TemplateSettings;
         }
-        private object get_63_ProgressBar_IsIndeterminate(object instance)
+        private object get_63_PersonPicture_Initials(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.Initials;
+        }
+        private void set_63_PersonPicture_Initials(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.Initials = (global::System.String)Value;
+        }
+        private object get_64_PersonPicture_BadgeGlyph(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.BadgeGlyph;
+        }
+        private void set_64_PersonPicture_BadgeGlyph(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.BadgeGlyph = (global::System.String)Value;
+        }
+        private object get_65_PersonPicture_BadgeImageSource(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.BadgeImageSource;
+        }
+        private void set_65_PersonPicture_BadgeImageSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.BadgeImageSource = (global::Microsoft.UI.Xaml.Media.ImageSource)Value;
+        }
+        private object get_66_PersonPicture_BadgeNumber(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.BadgeNumber;
+        }
+        private void set_66_PersonPicture_BadgeNumber(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.BadgeNumber = (global::System.Int32)Value;
+        }
+        private object get_67_PersonPicture_BadgeText(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.BadgeText;
+        }
+        private void set_67_PersonPicture_BadgeText(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.BadgeText = (global::System.String)Value;
+        }
+        private object get_68_PersonPicture_Contact(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.Contact;
+        }
+        private void set_68_PersonPicture_Contact(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.Contact = (global::Windows.ApplicationModel.Contacts.Contact)Value;
+        }
+        private object get_69_PersonPicture_DisplayName(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.DisplayName;
+        }
+        private void set_69_PersonPicture_DisplayName(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.DisplayName = (global::System.String)Value;
+        }
+        private object get_70_PersonPicture_IsGroup(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.IsGroup;
+        }
+        private void set_70_PersonPicture_IsGroup(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.IsGroup = (global::System.Boolean)Value;
+        }
+        private object get_71_PersonPicture_PreferSmallImage(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.PreferSmallImage;
+        }
+        private void set_71_PersonPicture_PreferSmallImage(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.PreferSmallImage = (global::System.Boolean)Value;
+        }
+        private object get_72_PersonPicture_ProfilePicture(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.ProfilePicture;
+        }
+        private void set_72_PersonPicture_ProfilePicture(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.ProfilePicture = (global::Microsoft.UI.Xaml.Media.ImageSource)Value;
+        }
+        private object get_73_PersonPicture_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.TemplateSettings;
+        }
+        private object get_74_ProgressBar_IsIndeterminate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             return that.IsIndeterminate;
         }
-        private void set_63_ProgressBar_IsIndeterminate(object instance, object Value)
+        private void set_74_ProgressBar_IsIndeterminate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             that.IsIndeterminate = (global::System.Boolean)Value;
         }
-        private object get_64_ProgressBar_ShowPaused(object instance)
+        private object get_75_ProgressBar_ShowPaused(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             return that.ShowPaused;
         }
-        private void set_64_ProgressBar_ShowPaused(object instance, object Value)
+        private void set_75_ProgressBar_ShowPaused(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             that.ShowPaused = (global::System.Boolean)Value;
         }
-        private object get_65_ProgressBar_ShowError(object instance)
+        private object get_76_ProgressBar_ShowError(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             return that.ShowError;
         }
-        private void set_65_ProgressBar_ShowError(object instance, object Value)
+        private void set_76_ProgressBar_ShowError(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             that.ShowError = (global::System.Boolean)Value;
         }
-        private object get_66_ProgressBar_TemplateSettings(object instance)
+        private object get_77_ProgressBar_TemplateSettings(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
             return that.TemplateSettings;
         }
-        private object get_67_ProgressRing_IsActive(object instance)
+        private object get_78_ProgressRing_IsActive(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             return that.IsActive;
         }
-        private void set_67_ProgressRing_IsActive(object instance, object Value)
+        private void set_78_ProgressRing_IsActive(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             that.IsActive = (global::System.Boolean)Value;
         }
-        private object get_68_ProgressRing_IsIndeterminate(object instance)
+        private object get_79_ProgressRing_IsIndeterminate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             return that.IsIndeterminate;
         }
-        private void set_68_ProgressRing_IsIndeterminate(object instance, object Value)
+        private void set_79_ProgressRing_IsIndeterminate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             that.IsIndeterminate = (global::System.Boolean)Value;
         }
-        private object get_69_ProgressRing_Maximum(object instance)
+        private object get_80_ProgressRing_Maximum(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             return that.Maximum;
         }
-        private void set_69_ProgressRing_Maximum(object instance, object Value)
+        private void set_80_ProgressRing_Maximum(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             that.Maximum = (global::System.Double)Value;
         }
-        private object get_70_ProgressRing_Minimum(object instance)
+        private object get_81_ProgressRing_Minimum(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             return that.Minimum;
         }
-        private void set_70_ProgressRing_Minimum(object instance, object Value)
+        private void set_81_ProgressRing_Minimum(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             that.Minimum = (global::System.Double)Value;
         }
-        private object get_71_ProgressRing_TemplateSettings(object instance)
+        private object get_82_ProgressRing_TemplateSettings(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             return that.TemplateSettings;
         }
-        private object get_72_ProgressRing_Value(object instance)
+        private object get_83_ProgressRing_Value(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             return that.Value;
         }
-        private void set_72_ProgressRing_Value(object instance, object Value)
+        private void set_83_ProgressRing_Value(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
             that.Value = (global::System.Double)Value;
@@ -1978,73 +2132,149 @@ namespace Lambda.Lambda_XamlTypeInfo
                 xamlMember.Getter = get_62_InfoBar_TemplateSettings;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.Initials":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Initials", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_63_PersonPicture_Initials;
+                xamlMember.Setter = set_63_PersonPicture_Initials;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.BadgeGlyph":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "BadgeGlyph", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_64_PersonPicture_BadgeGlyph;
+                xamlMember.Setter = set_64_PersonPicture_BadgeGlyph;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.BadgeImageSource":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "BadgeImageSource", "Microsoft.UI.Xaml.Media.ImageSource");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_65_PersonPicture_BadgeImageSource;
+                xamlMember.Setter = set_65_PersonPicture_BadgeImageSource;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.BadgeNumber":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "BadgeNumber", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_66_PersonPicture_BadgeNumber;
+                xamlMember.Setter = set_66_PersonPicture_BadgeNumber;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.BadgeText":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "BadgeText", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_67_PersonPicture_BadgeText;
+                xamlMember.Setter = set_67_PersonPicture_BadgeText;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.Contact":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Contact", "Windows.ApplicationModel.Contacts.Contact");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_68_PersonPicture_Contact;
+                xamlMember.Setter = set_68_PersonPicture_Contact;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.DisplayName":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "DisplayName", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_69_PersonPicture_DisplayName;
+                xamlMember.Setter = set_69_PersonPicture_DisplayName;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.IsGroup":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsGroup", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_70_PersonPicture_IsGroup;
+                xamlMember.Setter = set_70_PersonPicture_IsGroup;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.PreferSmallImage":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "PreferSmallImage", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_71_PersonPicture_PreferSmallImage;
+                xamlMember.Setter = set_71_PersonPicture_PreferSmallImage;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.ProfilePicture":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ProfilePicture", "Microsoft.UI.Xaml.Media.ImageSource");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_72_PersonPicture_ProfilePicture;
+                xamlMember.Setter = set_72_PersonPicture_ProfilePicture;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.TemplateSettings":
+                userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings");
+                xamlMember.Getter = get_73_PersonPicture_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Microsoft.UI.Xaml.Controls.ProgressBar.IsIndeterminate":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsIndeterminate", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_ProgressBar_IsIndeterminate;
-                xamlMember.Setter = set_63_ProgressBar_IsIndeterminate;
+                xamlMember.Getter = get_74_ProgressBar_IsIndeterminate;
+                xamlMember.Setter = set_74_ProgressBar_IsIndeterminate;
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressBar.ShowPaused":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ShowPaused", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_ProgressBar_ShowPaused;
-                xamlMember.Setter = set_64_ProgressBar_ShowPaused;
+                xamlMember.Getter = get_75_ProgressBar_ShowPaused;
+                xamlMember.Setter = set_75_ProgressBar_ShowPaused;
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressBar.ShowError":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "ShowError", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_ProgressBar_ShowError;
-                xamlMember.Setter = set_65_ProgressBar_ShowError;
+                xamlMember.Getter = get_76_ProgressBar_ShowError;
+                xamlMember.Setter = set_76_ProgressBar_ShowError;
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressBar.TemplateSettings":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings");
-                xamlMember.Getter = get_66_ProgressBar_TemplateSettings;
+                xamlMember.Getter = get_77_ProgressBar_TemplateSettings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressRing.IsActive":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsActive", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_ProgressRing_IsActive;
-                xamlMember.Setter = set_67_ProgressRing_IsActive;
+                xamlMember.Getter = get_78_ProgressRing_IsActive;
+                xamlMember.Setter = set_78_ProgressRing_IsActive;
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressRing.IsIndeterminate":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "IsIndeterminate", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_68_ProgressRing_IsIndeterminate;
-                xamlMember.Setter = set_68_ProgressRing_IsIndeterminate;
+                xamlMember.Getter = get_79_ProgressRing_IsIndeterminate;
+                xamlMember.Setter = set_79_ProgressRing_IsIndeterminate;
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressRing.Maximum":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Maximum", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_69_ProgressRing_Maximum;
-                xamlMember.Setter = set_69_ProgressRing_Maximum;
+                xamlMember.Getter = get_80_ProgressRing_Maximum;
+                xamlMember.Setter = set_80_ProgressRing_Maximum;
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressRing.Minimum":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Minimum", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_70_ProgressRing_Minimum;
-                xamlMember.Setter = set_70_ProgressRing_Minimum;
+                xamlMember.Getter = get_81_ProgressRing_Minimum;
+                xamlMember.Setter = set_81_ProgressRing_Minimum;
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressRing.TemplateSettings":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings");
-                xamlMember.Getter = get_71_ProgressRing_TemplateSettings;
+                xamlMember.Getter = get_82_ProgressRing_TemplateSettings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ProgressRing.Value":
                 userType = (global::Lambda.Lambda_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
                 xamlMember = new global::Lambda.Lambda_XamlTypeInfo.XamlMember(this, "Value", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_72_ProgressRing_Value;
-                xamlMember.Setter = set_72_ProgressRing_Value;
+                xamlMember.Getter = get_83_ProgressRing_Value;
+                xamlMember.Setter = set_83_ProgressRing_Value;
                 break;
             }
             return xamlMember;
