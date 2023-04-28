@@ -2,7 +2,6 @@
     x:Class="Lambda.AdvancedScanningPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Lambda"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -12,14 +11,16 @@
         <ScrollViewer>
             <StackPanel x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
                 <InfoBar IsOpen="True" IsClosable="False" Severity="Informational" Title="Information" Message="This feature is a work in progress." />
-                <Button x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Content="Select Object" Margin="0, 25" Height="44" Click="PickObjectButton_Click" HorizontalAlignment="Center"/>
+
+                <Button x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Margin="0, 25" Content="Select Object" Height="44" Click="PickObjectButton_Click" HorizontalAlignment="Center"/>
                 <TextBlock x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
-                <Button  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="AdvButton_Click" Margin="0, 25" HorizontalAlignment="Center" Height="44">Scan Selected Object</Button>
+                <Button  x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="AdvButton_Click" HorizontalAlignment="Center" Height="44">Scan Selected Object</Button>
                 <ContentDialog x:Name="StatusDialog" CloseButtonText="Ok" />
                 <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
             </StackPanel>
         </ScrollViewer>
         
+
         <Grid x:Name="CustomDialogOverlay" Visibility="Collapsed">
             <Rectangle Fill="Black" Opacity="0.5" />
             <Grid Width="300" Height="200" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">

@@ -31,5 +31,11 @@ namespace Lambda
         protected override void OnNavigatedTo(NavigationEventArgs e) {
             base.OnNavigatedTo(e);
         }
+
+        private void LogOutButton_Click (object sender, RoutedEventArgs e) {
+
+        }
+
+        
     }
 }

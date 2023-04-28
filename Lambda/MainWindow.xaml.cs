@@ -50,7 +50,6 @@ namespace Lambda {
         public static bool CameFromToggle = false;
         public static bool CameFromGridChange = false;
 
-
         public XamlRoot XamlRoot { get; private set; }
 
         public MainWindow () {

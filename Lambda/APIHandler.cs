@@ -1,11 +1,8 @@
 ﻿using RestSharp;
 using System;
 using System.Threading.Tasks;
-using System.Net.Http.Headers;
-using System.Net;
 using System.Net.Http;
 using System.Threading;
-using Windows.Media.Protection.PlayReady;
 
 namespace Program {
 
@@ -36,11 +33,8 @@ namespace Program {
         public async Task<RestResponse> VTAPI_Upload_File (RestRequest request) {
             this.__request = new RestRequest ()
                 .AddHeader ("content-type", "multipart/form-data; boundary=---011000010111000001101001")
-                .AddHeader("Accept", "application/json")
-                .AddHeader ("x-apikey", $"{__privateapikey}")
-                .AddParameter ( "multipart/form-data; boundary=---011000010111000001101001", 
-                                "-----011000010111000001101001\r\nContent-Disposition: form-data; name=\"file\"\r\n\r\ndata:application/octet-stream;name=Lay%20of%20the%20Land.md;base64,IyMjIEludGVybmFsIE5ldHdvcmtzCgojIyMgRGVtaWxpdGFyaXplZCBab25lIChETVopCgo=\r\n-----011000010111000001101001--\r\n\r\n", 
-                                ParameterType.RequestBody);
+                .AddHeader ("Accept", "application/json")
+                .AddHeader ("x-apikey", $"{__privateapikey}");
             dynamic response = await ExecuteAsync (request);
             return response;
         }

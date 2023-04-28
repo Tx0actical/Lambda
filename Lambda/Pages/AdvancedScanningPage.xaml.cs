@@ -1,19 +1,13 @@
 using System;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI;
 using Windows.Storage.Pickers;
 using Program; // local namespace for APIHandler.cs
-using RestSharp;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using Windows.Storage.Streams;
 using Windows.Storage;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
 
 namespace Lambda {
     /// <summary>
@@ -21,7 +15,6 @@ namespace Lambda {
     /// </summary>
     public sealed partial class AdvancedScanningPage : Page {
 
-        
         public static bool CameFromToggle = false;
         public static bool CameFromGridChange = false;
         public dynamic fileContent;
@@ -86,7 +79,5 @@ namespace Lambda {
         private void CustomDialogCloseButton_Click (object sender, RoutedEventArgs e) {
             CustomDialogOverlay.Visibility = Visibility.Collapsed;
         }
-
-
     }
 }

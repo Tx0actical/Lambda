@@ -27,7 +27,6 @@
                                                          
                                                
                                                              
-                        
                         PaneTitle="{Binding ElementName=headerText, Path=Text, Mode=TwoWay}"
                         PaneDisplayMode="Auto"
                         ExpandedModeThresholdWidth="600"
@@ -35,14 +34,10 @@
                         IsBackEnabled="True"
                         IsSettingsVisible="False"
                         IsBackButtonVisible="Auto"
-                        
-                        
                         Background="{ThemeResource WindowCaptionButtonBackground}"
                         Grid.Row="1"
                         AlwaysShowHeader="True"
                         IsPaneToggleButtonVisible ="True">
-            
-
             <NavigationView.MenuItems>
 
                 <NavigationViewItemHeader Content="Scan"/>
