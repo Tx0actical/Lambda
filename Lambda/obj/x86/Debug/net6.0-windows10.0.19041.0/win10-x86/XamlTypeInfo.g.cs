@@ -2433,25 +2433,25 @@ namespace Lambda.Lambda_XamlTypeInfo
             }
             else if (_enumValues != null)
             {
-                int value = 0;
+                long value = 0;
 
                 string[] valueParts = input.Split(',');
 
                 foreach (string valuePart in valueParts) 
                 {
                     object partValue;
-                    int enumFieldValue = 0;
+                    long enumFieldValue = 0;
                     try
                     {
                         if (_enumValues.TryGetValue(valuePart.Trim(), out partValue))
                         {
-                            enumFieldValue = global::System.Convert.ToInt32(partValue);
+                            enumFieldValue = global::System.Convert.ToInt64(partValue);
                         }
                         else
                         {
                             try
                             {
-                                enumFieldValue = global::System.Convert.ToInt32(valuePart.Trim());
+                                enumFieldValue = global::System.Convert.ToInt64(valuePart.Trim());
                             }
                             catch( global::System.FormatException )
                             {
@@ -2461,7 +2461,7 @@ namespace Lambda.Lambda_XamlTypeInfo
                                     {
                                         if( _enumValues.TryGetValue(key.Trim(), out partValue) )
                                         {
-                                            enumFieldValue = global::System.Convert.ToInt32(partValue);
+                                            enumFieldValue = global::System.Convert.ToInt64(partValue);
                                             break;
                                         }
                                     }
@@ -2476,7 +2476,7 @@ namespace Lambda.Lambda_XamlTypeInfo
                     }
                 }
 
-                return value; 
+                return System.Convert.ChangeType(value, System.Enum.GetUnderlyingType(this.UnderlyingType));
             }
             throw new global::System.ArgumentException(input, FullName);
         }
