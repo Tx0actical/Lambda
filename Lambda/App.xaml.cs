@@ -48,5 +48,7 @@ namespace Lambda
         }
 
         private Window m_window;
+        public Window Window => m_window;
+
     }
 }

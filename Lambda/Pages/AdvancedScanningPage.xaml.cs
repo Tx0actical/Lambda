@@ -5,19 +5,13 @@ using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI;
 using Windows.Storage.Pickers;
 using Program; // local namespace for APIHandler.cs
-using Windows.Storage.Streams;
-using Windows.Storage;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Net.Http;
-using System.Runtime.InteropServices;
-using Microsoft.UI.Windowing;
-using Microsoft.UI.Xaml.Hosting;
 using WinRT.Interop;
+using System.Text.Json;
+using Microsoft.UI.Dispatching;
+using Microsoft.UI.Xaml.Documents;
 
-
-
-namespace Lambda
-{
+namespace Lambda {
     /// <summary>
     /// Page displaying the advanced scanning options.
     /// </summary>
@@ -27,8 +21,10 @@ namespace Lambda
         public static bool CameFromToggle = false;
         public static bool CameFromGridChange = false;
         public string selectedFilePath;
+        private readonly DispatcherQueue _dispatcherQueue = DispatcherQueue.GetForCurrentThread();
 
-        public AdvancedScanningPage()
+
+        public AdvancedScanningPage ()
         {
             this.InitializeComponent();
         }
@@ -39,6 +35,7 @@ namespace Lambda
         }
 
         private async void AdvButton_Click (object sender, RoutedEventArgs e) {
+
             AdvancedButton.Visibility = Visibility.Collapsed;
             string apiKey = Environment.GetEnvironmentVariable("LAMBDA_ACCOUNT_API_KEY");
             HttpClient httpClient = new HttpClient();
@@ -46,36 +43,71 @@ namespace Lambda
             advprogressbar.Visibility = Visibility.Visible;
 
             if (!string.IsNullOrEmpty (selectedFilePath)) {
-                HttpResponseMessage response = await apiHandler.UploadFileAsync(selectedFilePath);
+                var apiResponse = await apiHandler.UploadFileAsync(selectedFilePath);
+                if (apiResponse != null && apiResponse.Data != null) {
+                    var scanResult = await apiHandler.GetScanResultsAsync(apiResponse.Data.Id);
 
-                if (response.IsSuccessStatusCode) {
-                    advprogressbar.Visibility = Visibility.Visible;
-                    ShowCustomDialog (AdvancedButton, "Request sent successfully", "The request was sent successfully, and the server responded with a status code of " + response.StatusCode);
+                    if (scanResult != null && scanResult.Data != null) {
+                        // Update UI elements on the UI thread
+                        _dispatcherQueue.TryEnqueue (() => {
+                            IdResponseTextBlock.Text = scanResult.Data.Id;
+                            TypeResponseTextBlock.Text = scanResult.Data.Type;
+                            string output = $"Scan results:\n{JsonSerializer.Serialize (scanResult.Data, new JsonSerializerOptions { WriteIndented = true })}";
+
+                            OutputTextBox.Text = output;
+                            OutputTextBox.Visibility = Visibility.Visible;
+                        });
+                    }
+                }
+
+                System.Diagnostics.Debug.WriteLine ("IsSuccessStatusCode: " + apiResponse.IsSuccessStatusCode);
+
+                if (apiResponse != null && apiResponse.Data != null) {
+                    IdResponseTextBlock.Text = apiResponse.Data.Id;
+                    TypeResponseTextBlock.Text = apiResponse.Data.Type;
+                    
                 } else {
-                    advprogressbar.Visibility = Visibility.Visible;
-                    advprogressbar.ShowError = true;
-                    ShowCustomDialog (AdvancedButton, "Request failed", "The request failed, and the server responded with a status code of " + response.StatusCode);
+                    System.Diagnostics.Debug.WriteLine ("apiResponse or apiResponse.Data is null");
+                }
+
+                if (apiResponse.IsSuccessStatusCode) {
+                    advprogressbar.Visibility = Visibility.Collapsed;
+                    // Update UI elements on the UI thread
+                    
+                    _dispatcherQueue.TryEnqueue (() => {
+                        advprogressbar.Visibility = Visibility.Collapsed;
+                        ShowCustomDialog (AdvancedButton, "Request sent successfully", $"The request was sent successfully, and the server responded with a status code: {apiResponse.StatusCode}");
+                    });
+                } else {
+                    advprogressbar.Visibility = Visibility.Collapsed;
+                    // Update UI elements on the UI thread
+                    _dispatcherQueue.TryEnqueue (() => {
+                        advprogressbar.Visibility = Visibility.Visible;
+                        advprogressbar.IsIndeterminate = true;
+                        ShowCustomDialog (AdvancedButton, "Request failed", $"The request failed, and the server responded with a status code of: {apiResponse.StatusCode}");
+                    });
                 }
             } else {
                 ShowCustomDialog (AdvancedButton, "No file selected", "Please select a file to upload before clicking the button.");
             }
-
             AdvancedButton = (Button) sender;
         }
 
+        public IntPtr GetWindowHandle (Window window) {
+            return WindowNative.GetWindowHandle (window);
+        }
 
         private async void PickObjectButton_Click (object sender, RoutedEventArgs e) {
-            var openPicker = new FileOpenPicker()
-    {
+
+            PickAFileOutputTextBlock.Text = "";
+            var openPicker = new FileOpenPicker() {
                 ViewMode = PickerViewMode.Thumbnail,
                 FileTypeFilter = { "*" },
             };
-
-            // Get the Window
+            var currentWindow = ((App)Application.Current).Window;
             Window window = Window.Current;
-            IntPtr hWnd = WindowNative.GetWindowHandle(window);
+            IntPtr hWnd = GetWindowHandle(currentWindow);
 
-            // Initialize Window
             WindowId myWndId = Win32Interop.GetWindowIdFromWindow(hWnd);
             WinRT.Interop.InitializeWithWindow.Initialize (openPicker, hWnd);
 
@@ -89,14 +121,12 @@ namespace Lambda
         }
 
         private async void ShowCustomDialog (FrameworkElement element, string title, string message) {
-            // Create a new ContentDialog instance
+            
             ContentDialog customDialog = new ContentDialog {
-                XamlRoot = element.XamlRoot,
+                XamlRoot = this.XamlRoot,
                 Title = title,
                 Content = message,
-                CloseButtonText = "Cancel"
-                
-                
+                CloseButtonText = "Okay"
             };
 
             // Handle the PrimaryButtonClick event
@@ -124,11 +154,10 @@ namespace Lambda
                     break;
                 case ContentDialogResult.None:
                     // Perform actions for CloseButton or when the user cancels the dialog
+
                     break;
             }
         }
-
-
 
         private void CustomDialogCloseButton_Click(object sender, RoutedEventArgs e)
         {
