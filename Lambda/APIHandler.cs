@@ -1,59 +1,56 @@
-﻿using RestSharp;
-using System;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Program {
-
     public class APIOperationsHandler {
+        private readonly HttpClient _httpClient;
+        private readonly string _privateApiKey;
 
-        private RestRequest __request;
-        private RestResponse __response;
-        private RestClient __file_upload_client;
-        private readonly string __privateapikey = Environment.GetEnvironmentVariable("LAMBDA_ACCOUNT_API_KEY");
-
-        public RestRequest Request { get { return __request; } set { __request = value; } }
-        public RestResponse Response { get { return __response; } set { __response = value; } }
-        public RestClient Client { get { return __file_upload_client; } set { __file_upload_client = value; } }
-        public string PrivateAPIKey { get { return __privateapikey; } } // read-only
-
-        public void InstantiateRESTClient () {
-            __file_upload_client = new RestClient ("https://www.virustotal.com/api/v3/files");
+        public APIOperationsHandler (HttpClient httpClient, string privateApiKey) {
+            _httpClient = httpClient;
+            _privateApiKey = privateApiKey;
         }
 
         // Util Functions
-        public async Task<RestResponse> ExecuteAsync (RestRequest request, CancellationToken cancellationToken = default) {
-            var response = await __file_upload_client.ExecuteAsync(request, cancellationToken);
+        public async Task<HttpResponseMessage> ExecuteAsync (HttpRequestMessage request, CancellationToken cancellationToken = default) {
+            var response = await _httpClient.SendAsync(request, cancellationToken);
             return response;
         }
-
         // END: Util Functions
 
-        public async Task<RestResponse> VTAPI_Upload_File (RestRequest request) {
-            this.__request = new RestRequest ()
-                .AddHeader ("content-type", "multipart/form-data; boundary=---011000010111000001101001")
-                .AddHeader ("Accept", "application/json")
-                .AddHeader ("x-apikey", $"{__privateapikey}");
-            dynamic response = await ExecuteAsync (request);
-            return response;
+        public async Task<HttpResponseMessage> UploadFileAsync (string filePath, CancellationToken cancellationToken = default) {
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://www.virustotal.com/api/v3/files");
+            request.Headers.Add ("x-apikey", _privateApiKey);
+
+            using var fileContent = new ByteArrayContent(File.ReadAllBytes(filePath));
+            fileContent.Headers.ContentType = new MediaTypeHeaderValue ("application/octet-stream");
+            request.Content = fileContent;
+
+            return await ExecuteAsync (request, cancellationToken);
         }
 
-        public async Task<dynamic> VTAPI_Upload_URL () {
-            var client = new HttpClient();
-            var request = new HttpRequestMessage {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri ("https://www.virustotal.com/api/v3/urls"),
-                Headers = {
-                    { "accept", "application/json" },
-                },
-            };
+        public async Task<HttpResponseMessage> ScanUrlAsync (string urlToScan, CancellationToken cancellationToken = default) {
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://www.virustotal.com/api/v3/urls");
+            request.Headers.Add ("x-apikey", _privateApiKey);
 
-            using var response = await client.SendAsync (request);
-            response.EnsureSuccessStatusCode ();
-            var body = await response.Content.ReadAsStringAsync ();
-            return body;
+            var formData = new MultipartFormDataContent();
+            formData.Add (new StringContent (urlToScan), "url");
+            request.Content = formData;
+
+            return await ExecuteAsync (request, cancellationToken);
         }
+
+        public async Task<HttpResponseMessage> GetScanResultsAsync (string scanId, CancellationToken cancellationToken = default) {
+            var request = new HttpRequestMessage(HttpMethod.Get, $"https://www.virustotal.com/api/v3/analyses/{scanId}");
+            request.Headers.Add ("x-apikey", _privateApiKey);
+
+            return await ExecuteAsync (request, cancellationToken);
+        }
+
+
+
     }
-
 }
