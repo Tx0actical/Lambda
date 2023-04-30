@@ -11,15 +11,29 @@
         <ScrollViewer>
             <StackPanel x:ConnectionId='6' x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
                 <InfoBar IsOpen="True" IsClosable="False" Severity="Informational" Title="Information" Message="This feature is a work in progress." />
+                <Line Stroke="SteelBlue" X1="0" Y1="25" X2="10000" Y2="25" StrokeThickness="5"/>
                 <Button x:ConnectionId='7' x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Margin="0, 25" Content="Select Object" Height="44"                                HorizontalAlignment="Center"/>
+                
                 <TextBlock x:ConnectionId='8' x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
-                <Button x:ConnectionId='9' x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}"                         HorizontalAlignment="Center" Height="44">Scan Selected Object</Button>
-                <TextBlock x:ConnectionId='10' x:Name="IdResponseTextBlock" TextWrapping="Wrap" Visibility="Visible" HorizontalAlignment="Center" Height="44"/>
-                <TextBlock x:ConnectionId='11' x:Name="TypeResponseTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
-                <TextBox x:ConnectionId='12' x:Name="OutputTextBox" TextWrapping="Wrap" IsReadOnly="True" MaxLength="100000" Visibility="Collapsed" AcceptsReturn="True" />
+                <!--<Button x:Name="AdvancedButton" Style="{StaticResource AccentButtonStyle}" Click="AdvButton_Click" HorizontalAlignment="Center" Height="44">Scan Selected Object</Button>-->
+                <Button Content="Scan Selected Object" Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="This action will send selected file to VirusTotal. Proceed?" Margin="0,0,0,12"/>
+                                <Button x:ConnectionId='14' x:Name="AdvancedButton"                         Content="Proceed" />
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+                <TextBlock x:ConnectionId='9' x:Name="IdResponseTextBlock" TextWrapping="Wrap" Visibility="Visible" HorizontalAlignment="Center" Height="44"/>
+                
+                <TextBlock x:ConnectionId='10' x:Name="TypeResponseTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
+                
+                <TextBox x:ConnectionId='11' x:Name="OutputTextBox" TextWrapping="Wrap" IsReadOnly="True" MaxLength="100000" Visibility="Collapsed" AcceptsReturn="True" />
 
-                <ContentDialog x:ConnectionId='13' x:Name="StatusDialog" CloseButtonText="Ok" />
-                <ProgressBar x:ConnectionId='14' x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
+                <ContentDialog x:ConnectionId='12' x:Name="StatusDialog" CloseButtonText="Ok" />
+                <ProgressBar x:ConnectionId='13' x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
             </StackPanel>
         </ScrollViewer>
 

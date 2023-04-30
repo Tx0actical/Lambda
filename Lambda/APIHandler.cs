@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -136,6 +137,10 @@ namespace Program {
 
         [JsonPropertyName ("stats")]
         public Stats Stats { get; set; }
+
+        [JsonPropertyName ("results")]
+        public Dictionary<string, ScanResult> Results { get; set; }
+
     }
 
     public class Stats {
@@ -163,6 +168,27 @@ namespace Program {
         [JsonPropertyName ("undetected")]
         public int Undetected { get; set; }
     }
+
+    public class ScanResult {
+        [JsonPropertyName ("category")]
+        public string Category { get; set; }
+
+        [JsonPropertyName ("engine_name")]
+        public string EngineName { get; set; }
+
+        [JsonPropertyName ("engine_version")]
+        public string EngineVersion { get; set; }
+
+        [JsonPropertyName ("result")]
+        public string Result { get; set; }
+
+        [JsonPropertyName ("method")]
+        public string Method { get; set; }
+
+        [JsonPropertyName ("engine_update")]
+        public string EngineUpdate { get; set; }
+    }
+
 
 
 }
