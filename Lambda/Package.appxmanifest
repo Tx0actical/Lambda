@@ -8,13 +8,13 @@
 
   <Identity
     Name="aaaf1461-c12f-4c11-9d94-706f6d46a5ee"
-    Publisher="CN=mannu"
+    Publisher="CN=Tx0actical"
     Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>Lambda</DisplayName>
-    <PublisherDisplayName>mannu</PublisherDisplayName>
-    <Logo>Assets\WindowsIcon.png</Logo>
+    <PublisherDisplayName>Tx0actical</PublisherDisplayName>
+    <Logo>Assets\icons8-sphere-100.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -35,10 +35,10 @@
         Description="Lambda"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\WindowsIcon.png">
+        Square44x44Logo="Assets\icons8-sphere-100.png">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
-        <uap:SplashScreen Image="Assets\WindowsIcon.png" />
-        <uap:LockScreen BadgeLogo="Assets\WindowsIcon.png" Notification="badge"/>
+        <uap:SplashScreen Image="Assets\icons8-sphere-100.png" />
+        <uap:LockScreen BadgeLogo="Assets\icons8-sphere-100.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
   </Applications>

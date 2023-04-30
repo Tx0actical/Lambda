@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pua4B6UaRcsi7CxiHhyffSLkqjwfFqlgJSYUBfUYnZRXV6p8icTNWyFxO3PSNDq+cGdF7sy+gLAnllvkvgOvdg==",
+  "dgSpecHash": "t/tHO6ihx9Bwd4MnrUZkk79pFG+SgygGgVEMhBpPKyoxyyIK84f77MCx3wqcpXaKL5W0oXo91IGeeAfyd+Wfgg==",
   "success": true,
   "projectFilePath": "C:\\Users\\mannu\\source\\Lambda\\Lambda\\Lambda.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,8 @@
     "C:\\Users\\mannu\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\mannu\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512",
     "C:\\Users\\mannu\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.16\\microsoft.netcore.app.runtime.win-x86.6.0.16.nupkg.sha512",
-    "C:\\Users\\mannu\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.28\\microsoft.windows.sdk.net.ref.10.0.19041.28.nupkg.sha512",
+    "C:\\Users\\mannu\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.16\\microsoft.netcore.app.crossgen2.win-x64.6.0.16.nupkg.sha512",
+    "C:\\Users\\mannu\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22621.28\\microsoft.windows.sdk.net.ref.10.0.22621.28.nupkg.sha512",
     "C:\\Users\\mannu\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.16\\microsoft.aspnetcore.app.runtime.win-x86.6.0.16.nupkg.sha512",
     "C:\\Users\\mannu\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.16\\microsoft.netcore.app.runtime.win-arm64.6.0.16.nupkg.sha512",
     "C:\\Users\\mannu\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.16\\microsoft.aspnetcore.app.runtime.win-x64.6.0.16.nupkg.sha512",

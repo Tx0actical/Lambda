@@ -37,9 +37,6 @@
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>Lambda.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\WindowsIcon.ico">
-      <PackagePath>Assets\WindowsIcon.ico</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Lambda.deps.json">
       <PackagePath>Lambda.deps.json</PackagePath>
     </AppxPackagedFile>
@@ -784,6 +781,9 @@
     <AppxPackagedFile Include="C:\Users\mannu\.nuget\packages\communitytoolkit.winui.ui\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.UI.pri">
       <PackagePath>CommunityToolkit.WinUI.UI.pri</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\icons8-sphere-100.ico">
+      <PackagePath>Assets\icons8-sphere-100.ico</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
@@ -804,9 +804,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\Assets\WindowsIcon.png">
-      <PackagePath>Assets\WindowsIcon.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

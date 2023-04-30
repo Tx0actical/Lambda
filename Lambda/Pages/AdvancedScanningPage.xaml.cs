@@ -63,8 +63,8 @@ namespace Lambda {
                 System.Diagnostics.Debug.WriteLine ("IsSuccessStatusCode: " + apiResponse.IsSuccessStatusCode);
 
                 if (apiResponse != null && apiResponse.Data != null) {
-                    IdResponseTextBlock.Text = apiResponse.Data.Id;
-                    TypeResponseTextBlock.Text = apiResponse.Data.Type;
+                    IdResponseTextBlock.Text = "API response ID : " + apiResponse.Data.Id;
+                    TypeResponseTextBlock.Text = "API response type : " + apiResponse.Data.Type;
                     
                 } else {
                     System.Diagnostics.Debug.WriteLine ("apiResponse or apiResponse.Data is null");
@@ -79,10 +79,9 @@ namespace Lambda {
                         ShowCustomDialog (AdvancedButton, "Request sent successfully", $"The request was sent successfully, and the server responded with a status code: {apiResponse.StatusCode}");
                     });
                 } else {
-                    advprogressbar.Visibility = Visibility.Collapsed;
                     // Update UI elements on the UI thread
                     _dispatcherQueue.TryEnqueue (() => {
-                        advprogressbar.Visibility = Visibility.Visible;
+                        advprogressbar.Visibility = Visibility.Collapsed;
                         advprogressbar.IsIndeterminate = true;
                         ShowCustomDialog (AdvancedButton, "Request failed", $"The request failed, and the server responded with a status code of: {apiResponse.StatusCode}");
                     });
@@ -126,7 +125,7 @@ namespace Lambda {
                 XamlRoot = this.XamlRoot,
                 Title = title,
                 Content = message,
-                CloseButtonText = "Okay"
+                CloseButtonText = "Ok"
             };
 
             // Handle the PrimaryButtonClick event
@@ -154,7 +153,6 @@ namespace Lambda {
                     break;
                 case ContentDialogResult.None:
                     // Perform actions for CloseButton or when the user cancels the dialog
-
                     break;
             }
         }
