@@ -4,15 +4,12 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using System;
-using Windows.Storage.Pickers;
 using System.Runtime.InteropServices; // For DllImport
 using System.Collections.Generic;
 using System.Linq;
 using Windows.UI.Core;
 using Windows.System;
-using Microsoft.UI.Dispatching;
 using Microsoft.UI.Windowing;
-using WinRT;
 
 namespace Lambda {
 
@@ -29,7 +26,7 @@ namespace Lambda {
 
         object m_dispatcherQueueController = null;
         public void EnsureWindowsSystemDispatcherQueueController () {
-            if (Windows.System.DispatcherQueue.GetForCurrentThread () != null) {
+            if (DispatcherQueue.GetForCurrentThread () != null) {
                 // one already exists, so we'll just use it.
                 return;
             }
@@ -46,7 +43,7 @@ namespace Lambda {
     }
 
     public sealed partial class MainWindow : Window {
-        
+
         public static bool CameFromToggle = false;
         public static bool CameFromGridChange = false;
 
@@ -62,7 +59,7 @@ namespace Lambda {
             IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
             WindowId windowId = Win32Interop.GetWindowIdFromWindow(hWnd);
             AppWindow appWindow = AppWindow.GetFromWindowId(windowId);
-            appWindow.SetIcon ("Assets/WindowsIcon.ico");
+            appWindow.SetIcon ("Assets/sphere.png");
         }
 
         // Functions for Controls
@@ -167,11 +164,11 @@ namespace Lambda {
         public List<NavigationViewItem> GetNavigationViewItems () {
             var result = new List<NavigationViewItem>();
             var items = NavView.MenuItems.OfType<NavigationViewItem>().ToList();
-            items.AddRange (NavView.FooterMenuItems.OfType<NavigationViewItem>());
+            items.AddRange (NavView.FooterMenuItems.OfType<NavigationViewItem> ());
             result.AddRange (items);
 
             foreach (NavigationViewItem mainItem in items) {
-                result.AddRange (mainItem.MenuItems.OfType<NavigationViewItem>());
+                result.AddRange (mainItem.MenuItems.OfType<NavigationViewItem> ());
             }
 
             return result;
@@ -184,7 +181,7 @@ namespace Lambda {
         public List<NavigationViewItem> GetNavigationViewItems (Type type, string title) {
             return GetNavigationViewItems (type).Where (ni => ni.Content.ToString () == title).ToList ();
         }
- 
+
         public NavigationViewItem GetCurrentNavigationViewItem () {
             return NavView.SelectedItem as NavigationViewItem;
         }
@@ -207,8 +204,7 @@ namespace Lambda {
             }
 
             var items = GetNavigationViewItems(typeof(HomePage));
-            if (items.Any ()) // Check if the collection has any elements
-            {
+            if (items.Any ()) { // Check if the collection has any elements
                 SetCurrentNavigationViewItem (items.First ());
             } else {
                 System.Diagnostics.Debug.WriteLine ("No NavigationViewItem found for HomePage.");
@@ -257,11 +253,11 @@ namespace Lambda {
                     return type;
                 }
             }
-
             return null;
         }
 
         // END: For Debugging
+
         private void NavigationView_SelectionChanged (NavigationView sender, NavigationViewSelectionChangedEventArgs args) {
             SetCurrentNavigationViewItem (args.SelectedItemContainer as NavigationViewItem);
         }

@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Lambda.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Lambda"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource WindowCaptionButtonBackground}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
+                <InfoBar IsOpen="True" IsClosable="False" Severity="Warning" Title="Important" Message="This project is currently in development. If you have any feedback, post an issue on the official repo.">
+                    <InfoBar.ActionButton>
+                        <HyperlinkButton Content="Issues" NavigateUri="https://github.com/Tx0actical/Lambda/issues" />
+                    </InfoBar.ActionButton>
+
+                </InfoBar>
+
+                <RichTextBlock Grid.Row="0" TextAlignment="Left" Margin="0, 25">
+                    
+                    
+                </RichTextBlock>
+            </StackPanel>
+            
+        </ScrollViewer>
+        
+        
+            
+    </Grid>
+</Page>
+

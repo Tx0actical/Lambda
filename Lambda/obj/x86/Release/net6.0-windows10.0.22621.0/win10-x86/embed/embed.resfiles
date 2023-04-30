@@ -1,0 +1,10 @@
+App.xbf
+MainWindow.xbf
+Pages\AccountPage.xbf
+Pages\AdvancedScanningPage.xbf
+Pages\HelpPage.xbf
+Pages\HomePage.xbf
+Pages\ResultsPage.xbf
+Pages\ScanHistoryPage.xbf
+Pages\SettingsPage.xbf
+SplashScreen.xbf

@@ -1,0 +1,1 @@
+C:\Users\mannu\source\Lambda\Lambda\bin\x86\Debug\net6.0-windows10.0.22621.0\win10-x86\AppPackages\Lambda_1.0.0.0_x86_Debug_Test\Lambda_1.0.0.0_x86_Debug.msix

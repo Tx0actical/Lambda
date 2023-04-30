@@ -9,7 +9,9 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace Program {
+
     public class APIOperationsHandler {
+
         private readonly HttpClient _httpClient;
         private readonly string _privateApiKey;
         private const string BaseAPIUrl = "https://www.virustotal.com/api/v3";
@@ -188,7 +190,4 @@ namespace Program {
         [JsonPropertyName ("engine_update")]
         public string EngineUpdate { get; set; }
     }
-
-
-
 }
