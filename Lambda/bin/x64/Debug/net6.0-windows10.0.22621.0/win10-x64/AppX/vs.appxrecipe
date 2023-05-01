@@ -19,40 +19,40 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>A974DE8B76094F0170715DD55DCF366969995490BB842D6CC97197BF540C4DAE</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>aaaf1461-c12f-4c11-9d94-706f6d46a5ee_1.0.0.0_x64__fm4v6qgnx8vxa</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>728093EE5F36D44C712D3876BC8377E24C31434831BA82F33453F2CE228A6393</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>aaaf1461-c12f-4c11-9d94-706f6d46a5ee_1.0.1.0_x64__fm4v6qgnx8vxa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>aaaf1461-c12f-4c11-9d94-706f6d46a5ee_fm4v6qgnx8vxa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>aaaf1461-c12f-4c11-9d94-706f6d46a5ee</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=Tx0actical</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredVersion>1.0.1.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-05-01T17:38:33.753</Modified>
+      <Modified>2023-05-01T20:09:05.522</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-05-01T17:38:33.545</Modified>
+      <Modified>2023-05-01T20:09:05.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\Lambda.runtimeconfig.json">
       <PackagePath>Lambda.runtimeconfig.json</PackagePath>
-      <Modified>2023-05-01T17:29:29.682</Modified>
+      <Modified>2023-05-01T18:09:34.554</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\Lambda.dll">
       <PackagePath>Lambda.dll</PackagePath>
-      <Modified>2023-05-01T17:38:33.353</Modified>
+      <Modified>2023-05-01T20:09:05.220</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\obj\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\apphost.exe">
       <PackagePath>Lambda.exe</PackagePath>
-      <Modified>2023-05-01T17:38:33.364</Modified>
+      <Modified>2023-05-01T20:09:05.226</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\Lambda.deps.json">
       <PackagePath>Lambda.deps.json</PackagePath>
-      <Modified>2023-05-01T17:29:29.483</Modified>
+      <Modified>2023-05-01T18:09:34.366</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mannu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.16\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

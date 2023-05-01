@@ -48,7 +48,7 @@ namespace Lambda {
                     var scanResult = await apiHandler.GetScanResultsAsync(apiResponse.Data.Id);
 
                     if (scanResult != null && scanResult.Data != null) {
-                        // var completedScanResults = await apiHandler.WaitForScanCompletionAsync(scanResult.Data.Id);
+                        var completedScanResults = await apiHandler.WaitForScanCompletionAsync(scanResult.Data.Id);
                         // Update UI elements on the UI thread
                         _dispatcherQueue.TryEnqueue (() => {
                             IdResponseTextBlock.Text = scanResult.Data.Id;
