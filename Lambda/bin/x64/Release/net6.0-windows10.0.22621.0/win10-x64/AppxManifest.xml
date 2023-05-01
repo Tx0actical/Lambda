@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="aaaf1461-c12f-4c11-9d94-706f6d46a5ee" Publisher="CN=Tx0actical" Version="1.0.0.0" ProcessorArchitecture="x64" />
+  <Identity Name="aaaf1461-c12f-4c11-9d94-706f6d46a5ee" Publisher="CN=Tx0actical" Version="1.0.1.0" ProcessorArchitecture="x64" />
   <Properties>
     <DisplayName>Lambda</DisplayName>
     <PublisherDisplayName>Tx0actical</PublisherDisplayName>
