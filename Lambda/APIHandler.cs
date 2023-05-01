@@ -85,21 +85,7 @@ namespace Program {
             return apiResponse;
         }
 
-        // A new method to poll for the scan results until the status is no longer "queued"
-        public async Task<ScanResultsApiResponse> WaitForScanCompletionAsync (string analysisId, int pollingIntervalInSeconds = 10) {
-            ScanResultsApiResponse scanResults;
-
-            do {
-                // Wait for the specified polling interval
-                await Task.Delay (TimeSpan.FromSeconds (pollingIntervalInSeconds));
-
-                // Fetch the scan results
-                scanResults = await GetScanResultsAsync (analysisId);
-
-            } while (scanResults.Data.Attributes.Status == "queued");
-
-            return scanResults;
-        }
+        
 
     }
 

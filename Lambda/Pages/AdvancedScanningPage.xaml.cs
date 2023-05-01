@@ -37,9 +37,9 @@ namespace Lambda {
         private async void AdvButton_Click (object sender, RoutedEventArgs e) {
 
             AdvancedButton.Visibility = Visibility.Collapsed;
-            string apiKey = Environment.GetEnvironmentVariable("LAMBDA_ACCOUNT_API_KEY");
+            string APIKey = Environment.GetEnvironmentVariable("LAMBDA_ACCOUNT_API_KEY");
             HttpClient httpClient = new HttpClient();
-            APIOperationsHandler apiHandler = new APIOperationsHandler(httpClient, apiKey);
+            APIOperationsHandler apiHandler = new APIOperationsHandler(httpClient, APIKey);
             advprogressbar.Visibility = Visibility.Visible;
 
             if (!string.IsNullOrEmpty (selectedFilePath)) {
@@ -48,7 +48,7 @@ namespace Lambda {
                     var scanResult = await apiHandler.GetScanResultsAsync(apiResponse.Data.Id);
 
                     if (scanResult != null && scanResult.Data != null) {
-                        var completedScanResults = await apiHandler.WaitForScanCompletionAsync(scanResult.Data.Id);
+                        
                         // Update UI elements on the UI thread
                         _dispatcherQueue.TryEnqueue (() => {
                             IdResponseTextBlock.Text = scanResult.Data.Id;
