@@ -32,7 +32,7 @@
                 <TextBox x:Name="OutputTextBox" TextWrapping="Wrap" IsReadOnly="True" MaxLength="100000" Visibility="Collapsed" AcceptsReturn="True" />
 
                 <ContentDialog x:Name="StatusDialog" CloseButtonText="Ok" />
-                <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" ShowError="True" Height="44" VerticalAlignment="Center"/>
+                <ProgressBar x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" Height="44" VerticalAlignment="Center"/>
             </StackPanel>
         </ScrollViewer>
 
