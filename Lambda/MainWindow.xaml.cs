@@ -76,7 +76,7 @@ namespace Lambda {
 
         // Navigation Helpers
 
-        private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)> {
+        private readonly List<(string Tag, Type Page)> __pages = new List<(string Tag, Type Page)> {
             // Reference: https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview
             ("Tag_HomePage",                typeof(HomePage)),
             ("Tag_FileScanningPage",        typeof(AdvancedScanningPage)),
@@ -89,19 +89,19 @@ namespace Lambda {
 
         private void NavView_Navigate (string navItemTag, NavigationTransitionInfo transitionInfo) {
             // Reference: https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview
-            Type _page = null;
+            Type page = null;
             if (navItemTag == "Tag_SettingsPage") {
-                _page = typeof (SettingsPage);
+                page = typeof (SettingsPage);
             } else {
-                var item = _pages.FirstOrDefault(p => p.Tag.Equals(navItemTag));
-                _page = item.Page;
+                var item = __pages.FirstOrDefault(p => p.Tag.Equals(navItemTag));
+                page = item.Page;
             }
             // get page type
             var preNavPageType = ContentFrame.CurrentSourcePageType;
 
             // only navigate if selected page isn't currently loaded
-            if (!(_page is null) && !Type.Equals (preNavPageType, _page)) {
-                ContentFrame.Navigate (_page, null, new DrillInNavigationTransitionInfo ());
+            if (!(page is null) && !Type.Equals (preNavPageType, page)) {
+                ContentFrame.Navigate (page, null, new DrillInNavigationTransitionInfo ());
             }
         }
 
@@ -146,7 +146,7 @@ namespace Lambda {
         public void SetCurrentNavigationViewItem (NavigationViewItem item) {
             if (item != null) {
                 string tag = item.Tag.ToString();
-                var pageItem = _pages.FirstOrDefault(p => p.Tag == tag);
+                var pageItem = __pages.FirstOrDefault(p => p.Tag == tag);
 
                 if (pageItem.Equals (default ((string, Type)))) {
                     System.Diagnostics.Debug.WriteLine ($"No NavigationViewItem found for {tag}.");

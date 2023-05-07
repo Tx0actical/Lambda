@@ -26,16 +26,12 @@
                     </Button.Flyout>
                 </Button>
                 <TextBlock x:ConnectionId='9' x:Name="IdResponseTextBlock" TextWrapping="Wrap" Visibility="Visible" HorizontalAlignment="Center" Height="44"/>
-
                 <TextBlock x:ConnectionId='10' x:Name="TypeResponseTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>
-
                 <TextBox x:ConnectionId='11' x:Name="OutputTextBox" TextWrapping="Wrap" IsReadOnly="True" MaxLength="100000" Visibility="Collapsed" AcceptsReturn="True" />
-
                 <ContentDialog x:ConnectionId='12' x:Name="StatusDialog" CloseButtonText="Ok" />
                 <ProgressBar x:ConnectionId='13' x:Name="advprogressbar" Visibility="Collapsed" Width="Auto" IsIndeterminate="True" ShowPaused="False" Height="44" VerticalAlignment="Center"/>
             </StackPanel>
         </ScrollViewer>
-
 
         <Grid x:ConnectionId='2' x:Name="CustomDialogOverlay" Visibility="Collapsed">
             <Rectangle Fill="Black" Opacity="0.5" />
