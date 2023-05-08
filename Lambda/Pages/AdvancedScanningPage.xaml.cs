@@ -18,10 +18,9 @@ namespace Lambda {
 
     public sealed partial class AdvancedScanningPage : Page
     {
-        public static bool CameFromToggle = false;
-        public static bool CameFromGridChange = false;
-        public string selectedFilePath;
-        private readonly DispatcherQueue _dispatcherQueue = DispatcherQueue.GetForCurrentThread();
+        
+        public string __selectedFilePath;
+        private readonly DispatcherQueue __dispatcherQueue = DispatcherQueue.GetForCurrentThread();
 
 
         public AdvancedScanningPage ()
@@ -39,31 +38,37 @@ namespace Lambda {
             AdvancedButton.Visibility = Visibility.Collapsed;
             string APIKey = Environment.GetEnvironmentVariable("LAMBDA_ACCOUNT_API_KEY");
             HttpClient httpClient = new HttpClient();
-            APIOperationsHandler apiHandler = new APIOperationsHandler(httpClient, APIKey);
+            APIOperationsHandler APIHandler = new APIOperationsHandler(httpClient, APIKey);
             advprogressbar.Visibility = Visibility.Visible;
 
-            if (!string.IsNullOrEmpty (selectedFilePath)) {
-                var apiResponse = await apiHandler.UploadFileAsync(selectedFilePath);
+            if (!string.IsNullOrEmpty (__selectedFilePath)) {
+                var apiResponse = await APIHandler.UploadFileAsync(__selectedFilePath);
+
                 if (apiResponse != null && apiResponse.Data != null) {
-                    var scanResult = await apiHandler.GetScanResultsAsync(apiResponse.Data.Id);
+                    var scanResult = await APIHandler.GetScanResultsAsync(apiResponse.Data.Id);
 
                     if (scanResult != null && scanResult.Data != null) {
-                        var completedScanResults = await apiHandler.WaitForScanCompletionAsync(scanResult.Data.Id);
+
+                        var completedScanResults = await APIHandler.WaitForScanCompletionAsync(scanResult.Data.Id);
+
                         // Update UI elements on the UI thread
-                        _dispatcherQueue.TryEnqueue (() => {
+                        __dispatcherQueue.TryEnqueue (() => {
+
                             IdResponseTextBlock.Text = scanResult.Data.Id;
                             TypeResponseTextBlock.Text = scanResult.Data.Type;
                             string output = $"Scan results:\n{JsonSerializer.Serialize (scanResult.Data, new JsonSerializerOptions { WriteIndented = true })}";
-
                             OutputTextBox.Text = output;
                             OutputTextBox.Visibility = Visibility.Visible;
+
                         });
+
                     }
                 }
 
                 System.Diagnostics.Debug.WriteLine ("IsSuccessStatusCode: " + apiResponse.IsSuccessStatusCode);
 
                 if (apiResponse != null && apiResponse.Data != null) {
+
                     IdResponseTextBlock.Text = "API response ID : " + apiResponse.Data.Id;
                     TypeResponseTextBlock.Text = "API response type : " + apiResponse.Data.Type;
                     
@@ -75,16 +80,18 @@ namespace Lambda {
                     advprogressbar.Visibility = Visibility.Collapsed;
                     // Update UI elements on the UI thread
                     
-                    _dispatcherQueue.TryEnqueue (() => {
+                    __dispatcherQueue.TryEnqueue (() => {
+
                         advprogressbar.Visibility = Visibility.Collapsed;
-                        ShowCustomDialog (AdvancedButton, "Request sent successfully", $"The request was sent successfully, and the server responded with a status code: {apiResponse.StatusCode}");
+                        ShowCustomDialog (AdvancedButton, "Request sent successfully", $"The request was sent successfully, and the API responded with a status code: {apiResponse.StatusCode}");
+
                     });
                 } else {
                     // Update UI elements on the UI thread
-                    _dispatcherQueue.TryEnqueue (() => {
+                    __dispatcherQueue.TryEnqueue (() => {
                         advprogressbar.Visibility = Visibility.Collapsed;
                         advprogressbar.IsIndeterminate = true;
-                        ShowCustomDialog (AdvancedButton, "Request failed", $"The request failed, and the server responded with a status code of: {apiResponse.StatusCode}");
+                        ShowCustomDialog (AdvancedButton, "Request failed", $"The request failed, and the API responded with a status code: {apiResponse.StatusCode}");
                     });
                 }
             } else {
@@ -94,7 +101,9 @@ namespace Lambda {
         }
 
         public IntPtr GetWindowHandle (Window window) {
+
             return WindowNative.GetWindowHandle (window);
+
         }
 
         private async void PickObjectButton_Click (object sender, RoutedEventArgs e) {
@@ -114,7 +123,7 @@ namespace Lambda {
             var file = await openPicker.PickSingleFileAsync();
             if (file != null) {
                 PickAFileOutputTextBlock.Text = "Selected File : " + file.Name;
-                selectedFilePath = file.Path; // Store the selected file path to use in the AdvButton_Click method
+                __selectedFilePath = file.Path; // Store the selected file path to use in the AdvButton_Click method
             } else {
                 PickAFileOutputTextBlock.Text = "Operation Cancelled";
             }
