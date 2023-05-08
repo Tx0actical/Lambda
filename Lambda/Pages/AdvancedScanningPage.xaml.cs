@@ -42,10 +42,10 @@ namespace Lambda {
             advprogressbar.Visibility = Visibility.Visible;
 
             if (!string.IsNullOrEmpty (__selectedFilePath)) {
-                var apiResponse = await APIHandler.UploadFileAsync(__selectedFilePath);
+                var APIResponse = await APIHandler.UploadFileAsync(__selectedFilePath);
 
-                if (apiResponse != null && apiResponse.Data != null) {
-                    var scanResult = await APIHandler.GetScanResultsAsync(apiResponse.Data.Id);
+                if (APIResponse != null && APIResponse.Data != null) {
+                    var scanResult = await APIHandler.GetScanResultsAsync(APIResponse.Data.Id);
 
                     if (scanResult != null && scanResult.Data != null) {
 
@@ -65,25 +65,25 @@ namespace Lambda {
                     }
                 }
 
-                System.Diagnostics.Debug.WriteLine ("IsSuccessStatusCode: " + apiResponse.IsSuccessStatusCode);
+                System.Diagnostics.Debug.WriteLine ("IsSuccessStatusCode: " + APIResponse.IsSuccessStatusCode);
 
-                if (apiResponse != null && apiResponse.Data != null) {
+                if (APIResponse != null && APIResponse.Data != null) {
 
-                    IdResponseTextBlock.Text = "API response ID : " + apiResponse.Data.Id;
-                    TypeResponseTextBlock.Text = "API response type : " + apiResponse.Data.Type;
+                    IdResponseTextBlock.Text = "API response ID : " + APIResponse.Data.Id;
+                    TypeResponseTextBlock.Text = "API response type : " + APIResponse.Data.Type;
                     
                 } else {
-                    System.Diagnostics.Debug.WriteLine ("apiResponse or apiResponse.Data is null");
+                    System.Diagnostics.Debug.WriteLine ("APIResponse or APIResponse.Data is null");
                 }
 
-                if (apiResponse.IsSuccessStatusCode) {
+                if (APIResponse.IsSuccessStatusCode) {
                     advprogressbar.Visibility = Visibility.Collapsed;
                     // Update UI elements on the UI thread
                     
                     __dispatcherQueue.TryEnqueue (() => {
 
                         advprogressbar.Visibility = Visibility.Collapsed;
-                        ShowCustomDialog (AdvancedButton, "Request sent successfully", $"The request was sent successfully, and the API responded with a status code: {apiResponse.StatusCode}");
+                        ShowCustomDialog (AdvancedButton, "Request sent successfully", $"The request was sent successfully, and the API responded with a status code: {APIResponse.StatusCode}");
 
                     });
                 } else {
@@ -91,7 +91,7 @@ namespace Lambda {
                     __dispatcherQueue.TryEnqueue (() => {
                         advprogressbar.Visibility = Visibility.Collapsed;
                         advprogressbar.IsIndeterminate = true;
-                        ShowCustomDialog (AdvancedButton, "Request failed", $"The request failed, and the API responded with a status code: {apiResponse.StatusCode}");
+                        ShowCustomDialog (AdvancedButton, "Request failed", $"The request failed, and the API responded with a status code: {APIResponse.StatusCode}");
                     });
                 }
             } else {
