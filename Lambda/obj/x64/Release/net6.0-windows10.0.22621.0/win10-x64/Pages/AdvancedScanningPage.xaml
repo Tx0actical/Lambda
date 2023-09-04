@@ -10,7 +10,7 @@
     <Grid>
         <ScrollViewer>
             <StackPanel x:ConnectionId='6' x:Name="AdvScanStackPanel" Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
-                <InfoBar IsOpen="True" IsClosable="False" Severity="Informational" Title="Information" Message="This feature is a work in progress." />
+                <InfoBar IsOpen="True" IsClosable="True" Severity="Informational" Title="Information" Message="This feature is a work in progress." />
                 <Line Stroke="SteelBlue" X1="0" Y1="25" X2="10000" Y2="25" StrokeThickness="5"/>
                 <Button x:ConnectionId='7' x:Name="PickAFileButton" Style="{StaticResource AccentButtonStyle}" Margin="0, 25" Content="Select Object" Height="44"                                HorizontalAlignment="Center"/>
                 <TextBlock x:ConnectionId='8' x:Name="PickAFileOutputTextBlock" TextWrapping="Wrap" HorizontalAlignment="Center" Height="44"/>

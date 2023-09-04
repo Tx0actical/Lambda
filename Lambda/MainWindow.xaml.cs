@@ -76,8 +76,7 @@ namespace Lambda {
 
         // Navigation Helpers
 
-        private readonly List<(string Tag, Type Page)> __pages = new List<(string Tag, Type Page)> {
-            // Reference: https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview
+        private readonly List<(string Tag, Type Page)> __pages = new List<(string Tag, Type Page)> {  // Reference: https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview
             ("Tag_HomePage",                typeof(HomePage)),
             ("Tag_FileScanningPage",        typeof(AdvancedScanningPage)),
             ("Tag_ScanHistoryPage",         typeof(ScanHistoryPage)),
@@ -104,6 +103,8 @@ namespace Lambda {
                 ContentFrame.Navigate (page, null, new DrillInNavigationTransitionInfo ());
             }
         }
+
+        // START -> Helper Functions
 
         private bool TryGoBack () {
             // Reference: https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview
@@ -142,6 +143,8 @@ namespace Lambda {
                 e.Handled = TryGoBack ();
             }
         }
+
+        // END -> Helper Functions
 
         public void SetCurrentNavigationViewItem (NavigationViewItem item) {
             if (item != null) {
