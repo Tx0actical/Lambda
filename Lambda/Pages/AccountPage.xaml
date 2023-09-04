@@ -12,7 +12,7 @@
     <Grid>
         <ScrollViewer>
             <StackPanel Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
-                <InfoBar IsOpen="True" IsClosable="False" Severity="Informational" Title="Information" Message="This feature is a work in progress." />
+                <InfoBar IsOpen="True" IsClosable="True" Severity="Informational" Title="Information" Message="This feature is a work in progress." />
                 <PersonPicture Initials="AP" Margin="0, 25"/>
                 <TextBlock Text="Welcome Amit Panghal!" Margin="0, 25" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                 <Button Style="{StaticResource AccentButtonStyle}" Content="Log Out" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 25" Click="LogOutButton_Click"/>

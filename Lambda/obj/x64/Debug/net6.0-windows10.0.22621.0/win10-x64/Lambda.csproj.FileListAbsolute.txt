@@ -252,7 +252,6 @@ C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win
 C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\hostfxr.dll
 C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\hostpolicy.dll
 C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\mscordaccore.dll
-C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\mscordaccore_amd64_amd64_6.0.1623.17311.dll
 C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\mscordbi.dll
 C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\mscorrc.dll
 C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\msquic.dll
@@ -328,3 +327,4 @@ C:\Users\mannu\source\Lambda\Lambda\obj\x64\Debug\net6.0-windows10.0.22621.0\win
 C:\Users\mannu\source\Lambda\Lambda\obj\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\mannu\source\Lambda\Lambda\obj\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\mannu\source\Lambda\Lambda\obj\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\ProjectArchitectures.txt
+C:\Users\mannu\source\Lambda\Lambda\bin\x64\Debug\net6.0-windows10.0.22621.0\win10-x64\mscordaccore_amd64_amd64_6.0.2123.36311.dll

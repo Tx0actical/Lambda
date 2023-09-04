@@ -34,8 +34,7 @@ namespace Program {
             request.Headers.Add ("x-apikey", __privateAPIKey);
             using var content = new MultipartFormDataContent();
             
-            using var fileStream = File.OpenRead(filePath);
-            var fileContent = new StreamContent(fileStream);
+            var fileContent = new StreamContent(File.OpenRead(filePath));
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse ("application/octet-stream");
             
             content.Add (fileContent, "file", Path.GetFileName (filePath));
@@ -43,10 +42,12 @@ namespace Program {
             var response = await ExecuteAsync(request, cancellationToken);
             
             var responseContent = await response.Content.ReadAsStringAsync();
+
             System.Diagnostics.Debug.WriteLine ("Raw response content: " + responseContent); // Debug
+
             var apiResponse = JsonSerializer.Deserialize<APIResponse>(responseContent);
             
-            System.Diagnostics.Debug.WriteLine ("Deserialized ApiResponse in UploadFileAsync: " + JsonSerializer.Serialize (apiResponse));
+            System.Diagnostics.Debug.WriteLine ("Deserialized ApiResponse in UploadFileAsync: " + JsonSerializer.Serialize (apiResponse)); // Debug
             apiResponse.IsSuccessStatusCode = response.IsSuccessStatusCode;
             apiResponse.StatusCode = (int) response.StatusCode;
 

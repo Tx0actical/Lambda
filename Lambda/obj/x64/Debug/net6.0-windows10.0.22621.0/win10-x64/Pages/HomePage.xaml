@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <ScrollViewer>
             <StackPanel Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
-                <InfoBar IsOpen="True" IsClosable="False" Severity="Warning" Title="Important" Message="This project is currently in development. If you have any feedback, post an issue on the official repo.">
+                <InfoBar IsOpen="True" IsClosable="True" Severity="Warning" Title="Important" Message="This project is currently in development. If you have any feedback, post an issue on the official repo.">
                     <InfoBar.ActionButton>
                         <HyperlinkButton Content="Issues" NavigateUri="https://github.com/Tx0actical/Lambda/issues" />
                     </InfoBar.ActionButton>

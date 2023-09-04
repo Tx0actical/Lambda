@@ -22,7 +22,6 @@ namespace Lambda {
         public string __selectedFilePath;
         private readonly DispatcherQueue __dispatcherQueue = DispatcherQueue.GetForCurrentThread();
 
-
         public AdvancedScanningPage ()
         {
             this.InitializeComponent();

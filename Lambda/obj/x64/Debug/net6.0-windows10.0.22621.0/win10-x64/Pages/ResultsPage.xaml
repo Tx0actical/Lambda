@@ -15,7 +15,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" Width="Auto" Height="Auto" Margin="50">
-            <InfoBar IsOpen="True" IsClosable="False" Severity="Error" Title="Error" Message="Feature not implemented." />
+            <InfoBar IsOpen="True" IsClosable="True" Severity="Error" Title="Error" Message="Feature not implemented." />
         </StackPanel>
         
 
